@@ -10,7 +10,6 @@ namespace TheColorsMod_C21341.Sae.Buff
         private const string Path = "6/RedHood_Emotion_Aura";
         private CreatureEffect _aura;
         public bool Changed = false;
-        public override bool isAssimilation => Changed;
         protected override string keywordId => Changed ? "RedAura_C21341" : "RedRage_C21341";
         protected override string keywordIconId => "RedHood_Rage";
 

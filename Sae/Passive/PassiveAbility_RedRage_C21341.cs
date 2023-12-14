@@ -58,7 +58,7 @@ namespace TheColorsMod_C21341.Sae.Passive
 
         public override void OnRoundStartAfter()
         {
-            if (!_activeRedRage) return;
+            if (!_activeRedRage || _redRage) return;
             _buff.Changed = true;
             _buff.OnAddBuf(-99);
             _redRage = true;

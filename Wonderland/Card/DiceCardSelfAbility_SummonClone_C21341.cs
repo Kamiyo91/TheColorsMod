@@ -36,7 +36,7 @@ namespace TheColorsMod_C21341.Wonderland.Card
         public static BattleUnitModel SummonSpecialUnit(int emotionLevel, Faction faction)
         {
             var unit = ModParameters.UnitModels.FirstOrDefault(x =>
-                x.PackageId == TheColorsModParameters.PackageId && x.Id == 10000900);
+                x.PackageId == TheColorsModParameters.PackageId && x.Id == 10000901);
             if (unit == null) return null;
             return faction == Faction.Player
                 ? UnitUtil.AddNewUnitPlayerSideCustomData(unit,
