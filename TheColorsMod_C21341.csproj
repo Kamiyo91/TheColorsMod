@@ -179,8 +179,6 @@
     <Compile Include="Zero\Passive\PassiveAbility_InnerFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_Zero_C21341.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reno\Effect\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,7 @@ namespace TheColorsMod_C21341.Reno.Card
             owner.cardSlotDetail.RecoverPlayPointByCard(1);
             owner.allyCardDetail.DrawCards(1);
             var buff = owner.GetActiveBuff<BattleUnitBuf_GreenLeaf_C21341>();
-            if (buff != null && buff.stack > 9)
+            if (buff != null)
                 card.AddDice(card.card.CreateDiceCardBehaviorList().FirstOrDefault());
         }
     }
