@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C6CDFD1-1E63-473D-92E4-BEF5BB2F6ED6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheColorsMod_C21341</RootNamespace>
+    <AssemblyName>TheColorsMod_C21341</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="1UtilLoader21341">
+      <HintPath>..\..\LoaderDLL\bin\Release\1UtilLoader21341.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\CommonDLL\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMapUtility">
+      <HintPath>..\..\CommonDLL\CustomMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\CommonDLL\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\CommonDLL\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\CommonDLL\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\CommonDLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\CommonDLL\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EffectUtil.cs" />
+    <Compile Include="Kamiyo\Action\BehaviourAction_BlackFlame_C21341.cs" />
+    <Compile Include="Kamiyo\AuraColor.cs" />
+    <Compile Include="Kamiyo\Buff\BattleUnitBuf_BattleHeat_C21341.cs" />
+    <Compile Include="Kamiyo\Buff\BattleUnitBuf_BlackFlame_C21341.cs" />
+    <Compile Include="Kamiyo\Buff\BattleUnitBuf_ShadowBuff_C21341.cs" />
+    <Compile Include="Kamiyo\Card\DiceCardSelfAbility_BlackFlameSlash_C21341.cs" />
+    <Compile Include="Kamiyo\Card\DiceCardSelfAbility_ShadowEgoCard_C21341.cs" />
+    <Compile Include="Kamiyo\Card\DiceCardSelfAbility_ShadowMassAttack_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BattleHeatClashLose_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BattleHeatClashWin_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BlackFlame2SpecialMass_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BlackFlame2Special_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BlackFlame2_C21341.cs" />
+    <Compile Include="Kamiyo\Dice\DiceCardAbility_BlackFlame3_C21341.cs" />
+    <Compile Include="Kamiyo\Effect\DiceAttackEffect_KamiyoHitForgotten_Sa21341.cs" />
+    <Compile Include="Kamiyo\Effect\DiceAttackEffect_KamiyoPierceForgotten_Sa21341.cs" />
+    <Compile Include="Kamiyo\Effect\DiceAttackEffect_KamiyoSlashForgotten_Sa21341.cs" />
+    <Compile Include="Kamiyo\Passive\PassiveAbility_BattleHeat_C21341.cs" />
+    <Compile Include="Kamiyo\Passive\PassiveAbility_ForgottenBlade_C21341.cs" />
+    <Compile Include="Kamiyo\Passive\PassiveAbility_ForgottenMask_C21341.cs" />
+    <Compile Include="Kamiyo\Passive\PassiveAbility_ForgottenSense_C21341.cs" />
+    <Compile Include="Kamiyo\Passive\PassiveAbility_TheBlackShadow_C21341.cs" />
+    <Compile Include="Mio\Action\FarAreaEffect_MioAbyssalDiamond_C21341.cs" />
+    <Compile Include="Mio\Action\BehaviourAction_MioAbyssalDiamond_C21341.cs" />
+    <Compile Include="Mio\Buff\BattleUnitBuf_GodAuraRelease_C21341.cs" />
+    <Compile Include="Mio\Buff\BattleUnitBuf_MysticEyesOfHeaven_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_WaterBlade_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_SakuraBloom_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_Rush_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_MioMassAttack_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_GodAuraCard_C21341.cs" />
+    <Compile Include="Mio\Card\DiceCardSelfAbility_EnergyRelease_C21341.cs" />
+    <Compile Include="Mio\Effect\DiceAttackEffect_MioHit_C21341.cs" />
+    <Compile Include="Mio\Effect\DiceAttackEffect_MioPierce_C21341.cs" />
+    <Compile Include="Mio\Effect\DiceAttackEffect_MioSlash_C21341.cs" />
+    <Compile Include="Mio\Passive\PassiveAbility_KurosawaBlade_C21341.cs" />
+    <Compile Include="Mio\Passive\PassiveAbility_GodFragment_C21341.cs" />
+    <Compile Include="Mio\Passive\PassiveAbility_HiddenBlade_C21341.cs" />
+    <Compile Include="Mio\Passive\PassiveAbility_MysticEyesOfHeaven_C21341.cs" />
+    <Compile Include="ModInit_C21341.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sae\Action\BehaviourAction_SaeDeath_C21341.cs" />
+    <Compile Include="Sae\Action\BehaviourAction_SaeMassAttackLastAtk_C21341.cs" />
+    <Compile Include="Sae\Action\BehaviourAction_SaeMassAttack_C21341.cs" />
+    <Compile Include="Sae\Action\FarAreaEffect_SaeMassAttack_C21341.cs" />
+    <Compile Include="Sae\Buff\BattleUnitBuf_AtkStance_C21341.cs" />
+    <Compile Include="Sae\Buff\BattleUnitBuf_RagingDeath_C21341.cs" />
+    <Compile Include="Sae\Buff\BattleUnitBuf_RedRage_C21341.cs" />
+    <Compile Include="Sae\Buff\BattleUnitBuf_DefStance_C21341.cs" />
+    <Compile Include="Sae\Card\DiceCardSelfAbility_AtkStance_C21341.cs" />
+    <Compile Include="Sae\Card\DiceCardSelfAbility_CombatReady_C21341.cs" />
+    <Compile Include="Sae\Card\DiceCardSelfAbility_DefStance_C21341.cs" />
+    <Compile Include="Sae\Card\DiceCardSelfAbility_RagingDeath_C21341.cs" />
+    <Compile Include="Sae\Card\DiceCardSelfAbility_SaeMassAttack_C21341.cs" />
+    <Compile Include="Sae\Dice\DiceCardAbility_CombatReadyCounterDice_Sa21341.cs" />
+    <Compile Include="Sae\Dice\DiceCardAbility_RagingDeathDice_C21341.cs" />
+    <Compile Include="Sae\Dice\DiceCardAbility_SaeBlock_C21341.cs" />
+    <Compile Include="Sae\Effect\DiceAttackEffect_SaeHit_C21341.cs" />
+    <Compile Include="Sae\Effect\DiceAttackEffect_SaePierce_C21341.cs" />
+    <Compile Include="Sae\Effect\DiceAttackEffect_SaeSlash_C21341.cs" />
+    <Compile Include="Sae\Passive\PassiveAbility_LoneWarrior_C21341.cs" />
+    <Compile Include="Sae\Passive\PassiveAbility_RedRage_C21341.cs" />
+    <Compile Include="Sae\Passive\PassiveAbility_Sae_C21341.cs" />
+    <Compile Include="Sae\Passive\PassiveAbility_StancePassive_C21341.cs" />
+    <Compile Include="Sae\StanceUtil.cs" />
+    <Compile Include="TheColorsModParameters.cs" />
+    <Compile Include="Wonderland\Buff\BattleUnitBuf_PurplePoison_C21341.cs" />
+    <Compile Include="Wonderland\Buff\BattleUnitBuf_SmokeBomb_C21341 .cs" />
+    <Compile Include="Wonderland\Buff\BattleUnitBuf_TimeRecession_C21341.cs" />
+    <Compile Include="Wonderland\Buff\BattleUnitBuf_Clone_C21341.cs" />
+    <Compile Include="Wonderland\Buff\BattleUnitBuf_SmokeScreen_C21341.cs" />
+    <Compile Include="Wonderland\Card\DiceCardSelfAbility_PoisonedSword_C21341.cs" />
+    <Compile Include="Wonderland\Card\DiceCardSelfAbility_EmergencyStocks_C21341.cs" />
+    <Compile Include="Wonderland\Card\DiceCardSelfAbility_SummonClone_C21341.cs" />
+    <Compile Include="Wonderland\Card\DiceCardSelfAbility_WonderlandMassAttack_C21341.cs" />
+    <Compile Include="Wonderland\Card\DiceCardSelfAbility_SmokeScreen_C21341.cs" />
+    <Compile Include="Wonderland\Dice\DiceCardAbility_Inflict1PurplePoison_C21341.cs" />
+    <Compile Include="Wonderland\Dice\DiceCardAbility_Inflict2PurplePoison_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_CloneHidedPassive_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_Clone_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_MysticEyeOfTimePerception_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_PoisonedBlade_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_TimeRecession_C21341.cs" />
+    <Compile Include="Wonderland\Passive\PassiveAbility_Wonderland_C21341.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reno\Action\" />
+    <Folder Include="Reno\Buff\" />
+    <Folder Include="Reno\Card\" />
+    <Folder Include="Reno\Effect\" />
+    <Folder Include="Reno\Passive\" />
+    <Folder Include="Zero\Action\" />
+    <Folder Include="Zero\Buff\" />
+    <Folder Include="Zero\Card\" />
+    <Folder Include="Zero\Effect\" />
+    <Folder Include="Zero\Passive\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
