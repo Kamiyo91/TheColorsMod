@@ -8,7 +8,7 @@ namespace TheColorsMod_C21341.Zero.Card
         public override void OnUseCard()
         {
             owner.allyCardDetail.DrawCards(1);
-            owner.OnAddBuff<BattleUnitBuf_BlueBurn_C21341>(3);
+            owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(3, maxStack: 999);
         }
     }
 }

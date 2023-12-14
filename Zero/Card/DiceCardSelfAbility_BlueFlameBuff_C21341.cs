@@ -21,7 +21,7 @@ namespace TheColorsMod_C21341.Zero.Card
         private static void Activate(BattleUnitModel unit)
         {
             //SkinUtil.BurnEffect(unit);
-            unit.OnAddBuff<BattleUnitBuf_BlueBurn_C21341>(-10);
+            unit.AddBuff<BattleUnitBuf_BlueBurn_C21341>(-10, true);
             unit.cardSlotDetail.RecoverPlayPoint(1);
             unit.allyCardDetail.DrawCards(1);
         }

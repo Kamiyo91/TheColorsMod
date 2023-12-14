@@ -10,7 +10,7 @@ namespace TheColorsMod_C21341.Zero.Card
             owner.allyCardDetail.DrawCards(1);
             owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Strength, 1, null);
             owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Endurance, 1, null);
-            owner.OnAddBuff<BattleUnitBuf_BlueBurn_C21341>(5);
+            owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(5, maxStack: 999);
         }
     }
 }

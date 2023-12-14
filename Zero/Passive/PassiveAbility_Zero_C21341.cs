@@ -28,11 +28,6 @@ namespace TheColorsMod_C21341.Zero.Passive
         public bool EgoActive;
         public bool EgoActiveQueue;
 
-        public override void OnRoundStartAfter()
-        {
-            ConvertBurnForAll();
-        }
-
         public void HandleSpecialCard()
         {
             owner.personalEgoDetail.RemoveCard(new LorId(TheColorsModParameters.PackageId, 39));
@@ -50,7 +45,7 @@ namespace TheColorsMod_C21341.Zero.Passive
         public void ConvertBurnForAll()
         {
             foreach (var unit in BattleObjectManager.instance.GetAliveList().Where(x =>
-                         x != owner && !x.passiveDetail.HasPassive<PassiveAbility_BlueBurn_C21341>()))
+                         x != owner && x.GetActivePassive<PassiveAbility_BlueBurn_C21341>() == null))
             {
                 var burnBuff = unit.bufListDetail.GetActivatedBufList().FirstOrDefault(x =>
                     x.bufType == KeywordBuf.Burn && !(x is BattleUnitBuf_BlueBurn_C21341));
@@ -82,6 +77,11 @@ namespace TheColorsMod_C21341.Zero.Passive
             ForcedEgo();
         }
 
+        public override void OnRoundEndTheLast()
+        {
+            ConvertBurnForAll();
+        }
+
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             var cardId = curCard.card.GetID();
@@ -103,8 +103,8 @@ namespace TheColorsMod_C21341.Zero.Passive
 
         public override void OnWaveStart()
         {
+            ConvertBurnForAll();
             owner.personalEgoDetail.AddCard(_egoCard);
-            AddHiddenPassive(owner);
             if (Singleton<StageController>.Instance.GetStageModel()
                 .GetStageStorageData<bool>(NpcEgoUsedSave, out _))
                 _npcEgoSceneCount = TheColorsModParameters.EgoSceneCount;
@@ -112,7 +112,7 @@ namespace TheColorsMod_C21341.Zero.Passive
 
         public void AddHiddenPassive(BattleUnitModel unit)
         {
-            var passive = unit.passiveDetail.AddPassive(new LorId(TheColorsModParameters.PackageId, 41));
+            var passive = unit.passiveDetail.AddPassive(new LorId(TheColorsModParameters.PackageId, 22));
             passive.Hide();
             unit.passiveDetail.OnCreated();
             passive.OnRoundStartAfter();
@@ -121,6 +121,25 @@ namespace TheColorsMod_C21341.Zero.Passive
         public override bool IsImmune(KeywordBuf buf)
         {
             return buf == KeywordBuf.Burn || base.IsImmune(buf);
+        }
+
+        public override void OnDie()
+        {
+            foreach (var unit in BattleObjectManager.instance.GetAliveList().Where(x =>
+                         x != owner && x.GetActivePassive<PassiveAbility_BlueBurn_C21341>() == null))
+            {
+                var passive = unit.GetActivePassive<PassiveAbility_BlueBurn_C21341>();
+                passive?.OnRoundStartAfter();
+                var buff = unit.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>();
+                if (buff != null) unit.bufListDetail.RemoveBuf(buff);
+            }
+        }
+
+        public override bool CanAddBuf(BattleUnitBuf buf)
+        {
+            if (buf.bufType != KeywordBuf.Burn || buf is BattleUnitBuf_BlueBurn_C21341) return true;
+            owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(buf.stack);
+            return false;
         }
     }
 }

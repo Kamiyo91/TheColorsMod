@@ -16,7 +16,7 @@ namespace TheColorsMod_C21341.Zero.Card
             {
                 card.AddDice(dice);
                 limit++;
-                buff.OnAddBuf(-10);
+                buff.AddBuffCustom(-10);
             }
         }
     }

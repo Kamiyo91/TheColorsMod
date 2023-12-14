@@ -10,7 +10,7 @@ namespace TheColorsMod_C21341.Zero.Card
             owner.cardSlotDetail.RecoverPlayPoint(1);
             var buff = owner.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>();
             if (buff == null || buff.stack < 5) return;
-            buff.OnAddBuf(-5);
+            buff.AddBuffCustom(-5);
             owner.allyCardDetail.DrawCards(1);
             card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
             {

@@ -18,7 +18,7 @@ namespace TheColorsMod_C21341.Zero.Card
             {
                 power = 4
             });
-            buff.OnAddBuf(-20);
+            buff.AddBuffCustom(-20);
         }
 
         public override void OnEndAreaAttack()

@@ -8,7 +8,7 @@ namespace TheColorsMod_C21341.Zero.Dice
         public override void BeforeRollDice()
         {
             var buff = owner.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>();
-            if (buff != null && buff.stack > 24)
+            if (buff != null && buff.stack > 19)
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 1

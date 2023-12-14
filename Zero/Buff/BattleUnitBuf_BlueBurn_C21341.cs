@@ -10,11 +10,6 @@ namespace TheColorsMod_C21341.Zero.Buff
         protected override string keywordId => "Burn";
         protected override string keywordIconId => "BlueFlame_C21341";
 
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, true, 0, 999);
-        }
-
         public override void OnRoundEnd()
         {
             if (!_owner.IsImmune(bufType))
@@ -27,9 +22,15 @@ namespace TheColorsMod_C21341.Zero.Buff
                     Singleton<StageController>.Instance.GetStageModel().AddBurnKillCount();
             }
 
+            if (_owner.GetActiveBuff<BattleUnitBuf_BlueFlameEgo_C21341>() != null) return;
             stack = stack * 2 / 3;
             if (stack <= 0)
                 _owner.bufListDetail.RemoveBuf(this);
+        }
+
+        public void AddBuffCustom(int addedStack)
+        {
+            this.OnAddBufCustom(addedStack, true, 0, 999);
         }
 
         private void PrintEffect()

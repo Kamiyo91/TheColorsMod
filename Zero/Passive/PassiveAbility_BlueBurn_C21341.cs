@@ -19,7 +19,7 @@ namespace TheColorsMod_C21341.Zero.Passive
         public override bool CanAddBuf(BattleUnitBuf buf)
         {
             if (_check || buf.bufType != KeywordBuf.Burn || buf is BattleUnitBuf_BlueBurn_C21341) return true;
-            owner.OnAddBuff<BattleUnitBuf_BlueBurn_C21341>(buf.stack);
+            owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(buf.stack);
             return false;
         }
     }
