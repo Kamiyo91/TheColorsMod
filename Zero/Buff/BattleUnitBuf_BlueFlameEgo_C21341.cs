@@ -45,8 +45,12 @@ namespace TheColorsMod_C21341.Zero.Buff
 
         public override int GetDamageReductionRate()
         {
-            var damageReduction = _buff.stack / 2;
-            return damageReduction > 0 ? damageReduction : 0;
+            return _buff.stack;
+        }
+
+        public override int GetBreakDamageReductionRate()
+        {
+            return _buff.stack;
         }
     }
 }

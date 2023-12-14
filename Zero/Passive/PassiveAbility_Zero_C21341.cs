@@ -12,6 +12,7 @@ namespace TheColorsMod_C21341.Zero.Passive
     {
         private const string NpcEgoUsedSave = "BlueFlameEgoUsedSaveC21341";
         private readonly LorId _egoAttackCard = new LorId(TheColorsModParameters.PackageId, 45);
+        private readonly LorId _egoAttackCardNpc = new LorId(TheColorsModParameters.PackageId, 905);
         private readonly LorId _egoCard = new LorId(TheColorsModParameters.PackageId, 37);
 
         private readonly List<AbnormalityCardDialog> _egoDialog = new List<AbnormalityCardDialog>
@@ -93,7 +94,9 @@ namespace TheColorsMod_C21341.Zero.Passive
         {
             owner.personalEgoDetail.RemoveCard(_egoCard);
             owner.EgoActive<BattleUnitBuf_BlueFlameEgo_C21341>(ref EgoActive,
-                emotionCardsId: new List<LorId> { _egoAttackCard }, dialog: _egoDialog, color: Color.blue);
+                emotionCardsId: new List<LorId>
+                    { owner.faction == Faction.Player ? _egoAttackCard : _egoAttackCardNpc }, dialog: _egoDialog,
+                color: Color.blue);
         }
 
         public override void OnBattleEnd()

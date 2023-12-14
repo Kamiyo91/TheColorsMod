@@ -12,6 +12,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
     {
         private const string NpcEgoUsedSave = "ShadowEgoUsedSaveC21341";
         private readonly LorId _egoAttackCard = new LorId(TheColorsModParameters.PackageId, 24);
+        private readonly LorId _egoAttackCardNpc = new LorId(TheColorsModParameters.PackageId, 903);
         private readonly LorId _egoCard = new LorId(TheColorsModParameters.PackageId, 25);
 
         private readonly List<AbnormalityCardDialog> _egoDialog = new List<AbnormalityCardDialog>
@@ -68,7 +69,9 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
         {
             owner.personalEgoDetail.RemoveCard(_egoCard);
             owner.EgoActive<BattleUnitBuf_ShadowBuff_C21341>(ref EgoActive,
-                emotionCardsId: new List<LorId> { _egoAttackCard }, dialog: _egoDialog, color: Color.gray);
+                emotionCardsId: new List<LorId>
+                    { owner.faction == Faction.Player ? _egoAttackCard : _egoAttackCardNpc }, dialog: _egoDialog,
+                color: Color.gray);
         }
 
         public override void OnRoundEndTheLast()

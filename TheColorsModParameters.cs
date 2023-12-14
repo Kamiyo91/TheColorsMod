@@ -23,5 +23,19 @@ namespace TheColorsMod_C21341
             new LorId(PackageId, 11), new LorId(PackageId, 11), new LorId(PackageId, 13), new LorId(PackageId, 13),
             new LorId(PackageId, 13)
         };
+
+        public static List<UpgradePages> GreenHunterUpgradeDeck = new List<UpgradePages>
+        {
+            new UpgradePages { OldPageId = new LorId(PackageId, 47), NewPageId = new LorId(PackageId, 51) },
+            new UpgradePages { OldPageId = new LorId(PackageId, 48), NewPageId = new LorId(PackageId, 54) },
+            new UpgradePages { OldPageId = new LorId(PackageId, 49), NewPageId = new LorId(PackageId, 53) },
+            new UpgradePages { OldPageId = new LorId(PackageId, 50), NewPageId = new LorId(PackageId, 55) }
+        };
+    }
+
+    public class UpgradePages
+    {
+        public LorId NewPageId;
+        public LorId OldPageId;
     }
 }
