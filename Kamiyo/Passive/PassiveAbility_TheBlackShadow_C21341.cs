@@ -68,7 +68,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
         {
             owner.personalEgoDetail.RemoveCard(_egoCard);
             owner.EgoActive<BattleUnitBuf_ShadowBuff_C21341>(ref EgoActive,
-                emotionCardsId: new List<LorId> { _egoAttackCard }, dialog: _egoDialog, color: Color.red);
+                emotionCardsId: new List<LorId> { _egoAttackCard }, dialog: _egoDialog, color: Color.gray);
         }
 
         public override void OnRoundEndTheLast()

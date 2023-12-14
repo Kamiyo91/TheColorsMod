@@ -75,7 +75,7 @@ namespace TheColorsMod_C21341.Mio.Passive
         {
             owner.personalEgoDetail.RemoveCard(_egoCard);
             owner.EgoActive<BattleUnitBuf_GodAuraRelease_C21341>(ref EgoActive, CustomSkin ? "" : EgoSkinName, true,
-                false, new List<LorId> { _egoAttackCard }, _egoDialog, Color.green);
+                false, new List<LorId> { _egoAttackCard }, _egoDialog, Color.white);
         }
 
         public override void OnBattleEnd()

@@ -150,6 +150,23 @@
     <Compile Include="Wonderland\Passive\PassiveAbility_PoisonedBlade_C21341.cs" />
     <Compile Include="Wonderland\Passive\PassiveAbility_TimeRecession_C21341.cs" />
     <Compile Include="Wonderland\Passive\PassiveAbility_Wonderland_C21341.cs" />
+    <Compile Include="Zero\Action\BehaviourAction_TheBlueFlame_C21341.cs" />
+    <Compile Include="Zero\Buff\BattleUnitBuf_BlueBurn_C21341.cs" />
+    <Compile Include="Zero\Buff\BattleUnitBuf_BlueFlameEgo_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueFlameBuff_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_FieryBlueFire_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueFlameEgo_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueFireMassAttack_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueEdge_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueCrossFire_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueFireBlade_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueHorizon_C21341.cs" />
+    <Compile Include="Zero\Card\DiceCardSelfAbility_BlueSmithing_C21341.cs" />
+    <Compile Include="Zero\Dice\DiceCardAbility_BlueFlameCounter_C21341.cs" />
+    <Compile Include="Zero\Effect\FarAreaEffect_TheBlueFlame_C21341.cs" />
+    <Compile Include="Zero\Passive\PassiveAbility_BlueBurn_C21341.cs" />
+    <Compile Include="Zero\Passive\PassiveAbility_InnerFlame_C21341.cs" />
+    <Compile Include="Zero\Passive\PassiveAbility_Zero_C21341.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reno\Action\" />
@@ -157,11 +174,6 @@
     <Folder Include="Reno\Card\" />
     <Folder Include="Reno\Effect\" />
     <Folder Include="Reno\Passive\" />
-    <Folder Include="Zero\Action\" />
-    <Folder Include="Zero\Buff\" />
-    <Folder Include="Zero\Card\" />
-    <Folder Include="Zero\Effect\" />
-    <Folder Include="Zero\Passive\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

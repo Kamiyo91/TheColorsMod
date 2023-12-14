@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Sound;
 using TheColorsMod_C21341.Sae.Buff;
 using UtilLoader21341.Util;
@@ -26,7 +25,8 @@ namespace TheColorsMod_C21341.Sae
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 9));
         }
 
-        public static void ChangeStance<T>(this BattleUnitModel owner, string stanceType, int deckIndex) where T : BattleUnitBuf, new()
+        public static void ChangeStance<T>(this BattleUnitModel owner, string stanceType, int deckIndex)
+            where T : BattleUnitBuf, new()
         {
             ChangeAnimation(owner);
             owner.OnAddBuff<T>(0);

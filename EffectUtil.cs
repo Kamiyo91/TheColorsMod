@@ -1,4 +1,5 @@
-﻿using Sound;
+﻿using System;
+using Sound;
 using UnityEngine;
 
 namespace TheColorsMod_C21341
@@ -27,6 +28,20 @@ namespace TheColorsMod_C21341
             }
 
             SoundEffectPlayer.PlaySound("Buf/Effect_Burn");
+        }
+
+        public static void MakeEffect(BattleUnitModel unit, string path, float sizeFactor = 1f,
+            BattleUnitModel target = null, float destroyTime = -1f)
+        {
+            try
+            {
+                SingletonBehavior<DiceEffectManager>.Instance.CreateCreatureEffect(path, sizeFactor, unit.view,
+                    target?.view, destroyTime);
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
         }
     }
 }
