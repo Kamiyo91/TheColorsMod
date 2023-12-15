@@ -13,7 +13,7 @@ namespace TheColorsMod_C21341.Reno.Card
         public override void OnStartBattle()
         {
             var passive = owner.GetActivePassive<PassiveAbility_Corrosion_C21341>();
-            if (passive != null) passive.Stack = 3;
+            if (passive != null) passive.Stack = 2;
         }
     }
 }
