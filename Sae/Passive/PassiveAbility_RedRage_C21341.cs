@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LOR_XML;
+using Sound;
 using TheColorsMod_C21341.Sae.Buff;
 using UnityEngine;
 using UtilLoader21341;
@@ -63,6 +64,7 @@ namespace TheColorsMod_C21341.Sae.Passive
             _buff.OnAddBuf(-99);
             _redRage = true;
             owner.EgoActive(ref EgoActive, CustomSkin ? "" : EgoSkinName, true, dialog: _egoDialog, color: Color.red);
+            SoundEffectPlayer.PlaySound("Creature/Angry_Meet");
         }
 
         public override void OnRoundEndTheLast()

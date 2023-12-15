@@ -98,8 +98,7 @@ namespace TheColorsMod_C21341.Reno.Passive
             {
                 var oldCards = owner.allyCardDetail.GetAllDeck().Where(x =>
                     x.GetID().packageId == item.OldPageId.packageId && x.GetID().id == item.OldPageId.id).ToList();
-                foreach (var card in oldCards)
-                    owner.allyCardDetail.ExhaustACardAnywhere(card);
+                owner.allyCardDetail.ExhaustCard(item.OldPageId);
                 for (var i = 0; i < oldCards.Count; i++)
                     owner.allyCardDetail.AddNewCardToDeck(item.NewPageId);
             }
