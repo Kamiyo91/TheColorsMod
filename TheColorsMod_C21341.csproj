@@ -108,6 +108,7 @@
     <Compile Include="ModInit_C21341.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reno\Action\BehaviourAction_GreenHunterFire_C21341.cs" />
+    <Compile Include="Reno\Buff\BattleUnitBuf_AnOldFriendGreen_C21341.cs" />
     <Compile Include="Reno\Buff\BattleUnitBuf_Corrosion_C21341.cs" />
     <Compile Include="Reno\Buff\BattleUnitBuf_GreenLeaf_C21341.cs" />
     <Compile Include="Reno\Card\DiceCardSelfAbility_CorrosionWeapons_C21341.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Reno\Card\DiceCardSelfAbility_GreenHunterEgo_C21341.cs" />
     <Compile Include="Reno\Card\DiceCardSelfAbility_GreenHunterMassAttack_C21341.cs" />
     <Compile Include="Reno\Card\DiceCardSelfAbility_Willpower_C21341.cs" />
+    <Compile Include="Reno\Passive\PassiveAbility_AnOldFriendGreenHunter_C21341.cs" />
     <Compile Include="Reno\Passive\PassiveAbility_Corrosion_C21341.cs" />
     <Compile Include="Reno\Passive\PassiveAbility_HunterReflex_C21341.cs" />
     <Compile Include="Reno\Passive\PassiveAbility_TheGreenHunter_C21341.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Wonderland\Passive\PassiveAbility_TimeRecession_C21341.cs" />
     <Compile Include="Wonderland\Passive\PassiveAbility_Wonderland_C21341.cs" />
     <Compile Include="Zero\Action\BehaviourAction_TheBlueFlame_C21341.cs" />
+    <Compile Include="Zero\Buff\BattleUnitBuf_AnOldFriendBlue_C21341.cs" />
     <Compile Include="Zero\Buff\BattleUnitBuf_BlueBurn_C21341.cs" />
     <Compile Include="Zero\Buff\BattleUnitBuf_BlueFlameEgo_C21341.cs" />
     <Compile Include="Zero\Card\DiceCardSelfAbility_BlueFlameBuff_C21341.cs" />
@@ -175,6 +178,7 @@
     <Compile Include="Zero\Card\DiceCardSelfAbility_BlueSmithing_C21341.cs" />
     <Compile Include="Zero\Dice\DiceCardAbility_BlueFlameCounter_C21341.cs" />
     <Compile Include="Zero\Effect\FarAreaEffect_TheBlueFlame_C21341.cs" />
+    <Compile Include="Zero\Passive\PassiveAbility_AnOldFriendBlueFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_BlueBurn_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_InnerFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_Zero_C21341.cs" />
