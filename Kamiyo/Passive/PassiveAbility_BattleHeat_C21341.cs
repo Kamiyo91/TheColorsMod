@@ -13,7 +13,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
 
         public override void OnRoundStart()
         {
-            if (Activated) owner.OnAddBuff<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0);
+            if (Activated) owner.OnAddBuff<BattleUnitBuf_BattleHeat_C21341>(0);
         }
 
         public override void OnWaveStart()

@@ -13,6 +13,7 @@ namespace TheColorsMod_C21341.Wonderland.Passive
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 27));
             if (owner.faction == Faction.Enemy)
                 owner.allyCardDetail.AddNewCardToDeck(new LorId(TheColorsModParameters.PackageId, 904));
+            else owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 36));
             owner.OnAddBuff<BattleUnitBuf_SmokeBomb_C21341>(1);
         }
 

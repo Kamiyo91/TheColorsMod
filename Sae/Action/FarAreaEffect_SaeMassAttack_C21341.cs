@@ -250,9 +250,9 @@ namespace TheColorsMod_C21341.Sae.Action
                         if (_motionIdx == 0)
                         {
                             detail = ActionDetail.Hit;
-                            var componentType = ModParameters.CustomEffects["SaeHit_Sa21341"];
+                            var componentType = ModParameters.CustomEffects["SaeHit_C21341"];
                             var diceAttackEffect =
-                                new GameObject("SaeHit_Sa21341").AddComponent(componentType) as
+                                new GameObject("SaeHit_C21341").AddComponent(componentType) as
                                     DiceAttackEffect;
                             diceAttackEffect.Initialize(_self.view, _curVictim.unitModel.view, 0.5f);
                             diceAttackEffect.SetScale(1f);
@@ -261,9 +261,9 @@ namespace TheColorsMod_C21341.Sae.Action
                         else
                         {
                             detail = ActionDetail.Penetrate;
-                            var componentType = ModParameters.CustomEffects["SaePierce_Sa21341"];
+                            var componentType = ModParameters.CustomEffects["SaePierce_C21341"];
                             var diceAttackEffect =
-                                new GameObject("SaePierce_Sa21341").AddComponent(componentType) as
+                                new GameObject("SaePierce_C21341").AddComponent(componentType) as
                                     DiceAttackEffect;
                             diceAttackEffect.Initialize(_self.view, _curVictim.unitModel.view, 0.5f);
                             diceAttackEffect.SetScale(1f);
@@ -285,9 +285,9 @@ namespace TheColorsMod_C21341.Sae.Action
                         var worldPosition = _curVictim.unitModel.view.WorldPosition + b;
                         _self.view.WorldPosition = worldPosition;
                         detail = ActionDetail.Slash;
-                        var componentType = ModParameters.CustomEffects["SaeSlash_Sa21341"];
+                        var componentType = ModParameters.CustomEffects["SaeSlash_C21341"];
                         var diceAttackEffect =
-                            new GameObject("SaeSlash_Sa21341").AddComponent(componentType) as
+                            new GameObject("SaeSlash_C21341").AddComponent(componentType) as
                                 DiceAttackEffect;
                         diceAttackEffect.Initialize(_self.view, _curVictim.unitModel.view, 0.5f);
                         diceAttackEffect.SetScale(1f);
@@ -307,9 +307,9 @@ namespace TheColorsMod_C21341.Sae.Action
                     detail2 = Random.Range(0f, 1f) > 0.5f ? ActionDetail.Hit : ActionDetail.Penetrate;
                     if (detail2 == ActionDetail.Hit)
                     {
-                        var componentType = ModParameters.CustomEffects["SaeHit_Sa21341"];
+                        var componentType = ModParameters.CustomEffects["SaeHit_C21341"];
                         var diceAttackEffect =
-                            new GameObject("SaeHit_Sa21341").AddComponent(componentType) as
+                            new GameObject("SaeHit_C21341").AddComponent(componentType) as
                                 DiceAttackEffect;
                         diceAttackEffect.Initialize(_self.view, _curVictim.unitModel.view, 0.5f);
                         diceAttackEffect.SetScale(1f);
@@ -317,9 +317,9 @@ namespace TheColorsMod_C21341.Sae.Action
                     }
                     else
                     {
-                        var componentType = ModParameters.CustomEffects["SaePierce_Sa21341"];
+                        var componentType = ModParameters.CustomEffects["SaePierce_C21341"];
                         var diceAttackEffect =
-                            new GameObject("SaePierce_Sa21341").AddComponent(componentType) as
+                            new GameObject("SaePierce_C21341").AddComponent(componentType) as
                                 DiceAttackEffect;
                         diceAttackEffect.Initialize(_self.view, _curVictim.unitModel.view, 0.5f);
                         diceAttackEffect.SetScale(1f);
