@@ -9,7 +9,7 @@ namespace TheColorsMod_C21341.Reno.Buff
     {
         public PassiveAbility_AnOldFriendGreenHunter_C21341 Passive;
         protected override string keywordId => "OldFriend_C21341";
-        protected override string keywordIconId => "OldFriendBlue_C21341";
+        protected override string keywordIconId => "OldFriendGreen_C21341";
 
         public override void Init(BattleUnitModel owner)
         {
