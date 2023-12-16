@@ -10,6 +10,7 @@
         public override int paramInBufDesc => 0;
         protected override string keywordId => "DirectImmortal_C21341";
         protected override string keywordIconId => "DirectImmortal_C21341";
+
         public override bool DirectAttack()
         {
             return true;

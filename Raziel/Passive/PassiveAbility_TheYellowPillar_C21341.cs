@@ -9,9 +9,10 @@ namespace TheColorsMod_C21341.Raziel.Passive
 {
     public class PassiveAbility_TheYellowPillar_C21341 : PassiveAbilityBase
     {
-        private readonly LorId _specialCard = new LorId(TheColorsModParameters.PackageId, 65);
         private readonly LorId _massAttackCard = new LorId(TheColorsModParameters.PackageId, 64);
         private readonly LorId _massAttackCardNpc = new LorId(TheColorsModParameters.PackageId, 907);
+        private readonly LorId _specialCard = new LorId(TheColorsModParameters.PackageId, 65);
+
         private readonly List<AbnormalityCardDialog> _surviveDialog = new List<AbnormalityCardDialog>
         {
             new AbnormalityCardDialog
@@ -44,6 +45,7 @@ namespace TheColorsMod_C21341.Raziel.Passive
         {
             owner.RecoverHP(3);
         }
+
         public override void OnBattleEnd()
         {
             owner.Revive(owner.MaxHp / 2);
