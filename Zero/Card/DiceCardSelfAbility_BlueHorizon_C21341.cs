@@ -7,7 +7,7 @@ namespace TheColorsMod_C21341.Zero.Card
     {
         public override void OnUseCard()
         {
-            owner.cardSlotDetail.RecoverPlayPoint(1);
+            owner.allyCardDetail.DrawCards(1);
             owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(3, maxStack: 999);
         }
     }
