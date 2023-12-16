@@ -107,6 +107,16 @@
     <Compile Include="Mio\Passive\PassiveAbility_MysticEyesOfHeaven_C21341.cs" />
     <Compile Include="ModInit_C21341.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raziel\Buff\BattleUnitBuf_DirectImmortal_C21341.cs" />
+    <Compile Include="Raziel\Buff\BattleUnitBuf_RedirectOnSelf_C21341.cs" />
+    <Compile Include="Raziel\Card\DiceCardSelfAbility_Meeting_C21341.cs" />
+    <Compile Include="Raziel\Card\DiceCardSelfAbility_Execution_C21341.cs" />
+    <Compile Include="Raziel\Card\DiceCardSelfAbility_GatheringSelfInquisitor_C21341.cs" />
+    <Compile Include="Raziel\Card\DiceCardSelfAbility_GatheringSelfPillar_C21341.cs" />
+    <Compile Include="Raziel\Card\DiceCardSelfAbility_RazielMassAttack_C21341.cs" />
+    <Compile Include="Raziel\Passive\PassiveAbility_TheStone_C21341.cs" />
+    <Compile Include="Raziel\Passive\PassiveAbility_TheWall_C21341.cs" />
+    <Compile Include="Raziel\Passive\PassiveAbility_TheYellowPillar_C21341.cs" />
     <Compile Include="Reno\Action\BehaviourAction_GreenHunterFire_C21341.cs" />
     <Compile Include="Reno\Buff\BattleUnitBuf_AnOldFriendGreen_C21341.cs" />
     <Compile Include="Reno\Buff\BattleUnitBuf_Corrosion_C21341.cs" />
