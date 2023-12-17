@@ -7,6 +7,7 @@ namespace TheColorsMod_C21341.Sae.Card
     {
         public override void OnUseCard()
         {
+            owner.allyCardDetail.DrawCards(1);
             if (!owner.bufListDetail.HasBuf<BattleUnitBuf_DefStance_C21341>()) return;
             foreach (var battleDice in card.GetDiceBehaviorList())
             {
