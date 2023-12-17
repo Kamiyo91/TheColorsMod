@@ -20,7 +20,7 @@ namespace TheColorsMod_C21341
                 },
                 new CardOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 25, 26, 903 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 23, 25, 26, 903 },
                     CardColorOptions = new CardColorOptionRoot
                     {
                         CardColor = new ColorRoot { R = 127, G = 127, B = 127, A = 255 },

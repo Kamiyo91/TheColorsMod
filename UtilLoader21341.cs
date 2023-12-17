@@ -25,7 +25,7 @@ namespace TheColorsMod_C21341
                 },
                 new CardOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 23, 26 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 26 },
                     Option = CardOption.OnlyPage, Keywords = new List<string> { "KamiyoPage_C21341" },
                     BookId = new List<LorIdRoot>
                         { new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000002 } }
