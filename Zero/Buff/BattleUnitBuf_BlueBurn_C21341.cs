@@ -17,7 +17,7 @@ namespace TheColorsMod_C21341.Zero.Buff
                 _owner.TakeDamage(stack * 2, DamageType.Buf, null, bufType);
                 PrintEffect();
                 if (_owner.bufListDetail.GetActivatedBuf(KeywordBuf.BurnBreak) != null)
-                    _owner.TakeBreakDamage(stack, DamageType.Buf, null, AtkResist.Normal, bufType);
+                    _owner.TakeBreakDamage(stack * 2, DamageType.Buf, null, AtkResist.Normal, bufType);
                 if (_owner.faction == Faction.Enemy && _owner.IsDead())
                     Singleton<StageController>.Instance.GetStageModel().AddBurnKillCount();
             }
