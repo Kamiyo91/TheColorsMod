@@ -48,9 +48,20 @@ namespace TheColorsMod_C21341
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 67, 68, 71, 72, 73, 74, 75, 76, 78, 79 },
+                    Ids = new List<int> { 67, 71, 72, 73, 74, 75, 78 },
                     Option = CardOption.OnlyPage,
-                    Keywords = new List<string> { "RenoPage_C21341", "EvolvePage_C21341" },
+                    Keywords = new List<string> { "MiyuPage_C21341" },
+                    BookId = new List<LorIdRoot>
+                        { new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000007 } }
+                },
+                new CardOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 68, 76, 79 },
+                    Option = CardOption.OnlyPage,
+                    Keywords = new List<string> { "MiyuPage_C21341" },
+                    OnlyAllyTargetCard = true,
+                    OneSideOnlyCard = true,
                     BookId = new List<LorIdRoot>
                         { new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000007 } }
                 },
