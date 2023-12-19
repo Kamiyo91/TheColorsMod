@@ -3,7 +3,7 @@ using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Dice
 {
-    public class DiceCardAbility_MagicOrbs_C21341 : DiceCardAbilityBase
+    public class DiceCardAbility_MagicOrbsDie_C21341 : DiceCardAbilityBase
     {
         public override string[] Keywords
         {

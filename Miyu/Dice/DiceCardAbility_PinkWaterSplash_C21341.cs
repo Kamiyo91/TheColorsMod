@@ -5,6 +5,7 @@
         public override void OnSucceedAttack(BattleUnitModel target)
         {
             var stack = target.bufListDetail.GetKewordBufAllStack(KeywordBuf.Burn);
+            if (stack == 0) return;
             target.TakeDamage(stack);
             target.TakeBreakDamage(stack);
             target.bufListDetail.RemoveBufAll(KeywordBuf.Burn);

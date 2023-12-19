@@ -124,7 +124,7 @@
     <Compile Include="Miyu\Dice\DiceCardAbility_DiceShield_C21341.cs" />
     <Compile Include="Miyu\Dice\DiceCardAbility_HealDice_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_StrengthenFire_C21341.cs" />
-    <Compile Include="Miyu\Dice\DiceCardAbility_MagicOrbs_C21341.cs" />
+    <Compile Include="Miyu\Dice\DiceCardAbility_MagicOrbsDie_C21341.cs" />
     <Compile Include="Miyu\Dice\DiceCardAbility_PinkWaterSplash_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic12_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic11_C21341.cs" />
