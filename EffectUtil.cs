@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using LOR_DiceSystem;
 using Sound;
 using UnityEngine;
 
@@ -43,5 +45,34 @@ namespace TheColorsMod_C21341
                 // ignored
             }
         }
+
+        public static void PrepareDeckMiyu(BattleUnitModel owner, bool notChangeDie)
+        {
+            foreach (var card in owner.allyCardDetail.GetAllDeck()
+                         .Where(x => !TheColorsModParameters.MiyuDeck.Contains(x.GetID())))
+            {
+                card.CopySelf();
+                card.XmlData.Spec.Ranged = CardRange.Far;
+                if (notChangeDie) continue;
+                foreach (var dice in card.GetBehaviourList())
+                    ChangeCardDiceEffectMiyu(dice);
+            }
+        }
+
+        public static void ChangeCardDiceEffectMiyu(DiceBehaviour dice)
+        {
+            var tryGetValue = TheColorsModParameters.MiyuEffects.TryGetValue(dice.MotionDetail, out var effect);
+            if (tryGetValue) dice.EffectRes = effect;
+        }
+        //public void ChangeNearToFar(BattleDiceCardModel card)
+        //{
+        //    if (card._xmlData.Spec.Ranged != CardRange.Far)
+        //    {
+        //        return;
+        //    }
+        //    var diceCardSpec = card._xmlData.Spec.Copy();
+        //    diceCardSpec.Ranged = CardRange.Near;
+        //    card._xmlData.Spec = diceCardSpec;
+        //}
     }
 }

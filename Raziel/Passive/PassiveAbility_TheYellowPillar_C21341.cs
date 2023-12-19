@@ -46,6 +46,13 @@ namespace TheColorsMod_C21341.Raziel.Passive
             owner.RecoverHP(3);
         }
 
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            var cardId = curCard.card.GetID();
+            if (cardId.packageId == TheColorsModParameters.PackageId && cardId.id == _specialCard.id)
+                owner.personalEgoDetail.RemoveCard(_specialCard);
+        }
+
         public override void OnBattleEnd()
         {
             owner.Revive(owner.MaxHp / 2);

@@ -4,7 +4,7 @@ using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Effect
 {
-    public class DiceAttackEffect_MiyuMagic2Self_C21341 : DiceAttackEffect
+    public class DiceAttackEffect_MiyuMagic6Self_C21341 : DiceAttackEffect
     {
         private float _duration;
 
@@ -12,7 +12,7 @@ namespace TheColorsMod_C21341.Miyu.Effect
         {
             base.Initialize(self, target, destroyTime);
             _duration = destroyTime;
-            DiceEffectUtil.InitializeEffect(TheColorsModParameters.Path, 0.50f, 0.20f, false, this, self, self);
+            DiceEffectUtil.InitializeEffect(TheColorsModParameters.Path, 0.50f, 0.30f, false, this, self, target);
         }
 
 
