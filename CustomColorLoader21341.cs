@@ -62,6 +62,16 @@ namespace TheColorsMod_C21341
                         CardColor = new ColorRoot { R = 153, G = 255, B = 153, A = 255 },
                         CustomIconColor = new ColorRoot { R = 153, G = 255, B = 153, A = 255 }, UseHSVFilter = false
                     }
+                },
+                new CardOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 67, 68, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79 },
+                    CardColorOptions = new CardColorOptionRoot
+                    {
+                        CardColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
+                        CustomIconColor = new ColorRoot { R = 140, G = 41, B = 72, A = 255 }, UseHSVFilter = false
+                    }
                 }
             };
         }
@@ -133,6 +143,15 @@ namespace TheColorsMod_C21341
                 },
                 new KeypageOptionRoot
                 {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000007 },
+                    KeypageColorOptions = new ColorOptionsRoot
+                    {
+                        FrameColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
+                        TextColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 }
+                    }
+                },
+                new KeypageOptionRoot
+                {
                     PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000900, 10000901 },
                     KeypageColorOptions = new ColorOptionsRoot
                     {
@@ -199,6 +218,15 @@ namespace TheColorsMod_C21341
                     {
                         FrameColor = new ColorRoot { R = 176, G = 102, B = 255, A = 255 },
                         TextColor = new ColorRoot { R = 176, G = 102, B = 255, A = 255 }
+                    }
+                },
+                new PassiveOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 31 },
+                    PassiveColorOptions = new ColorOptionsRoot
+                    {
+                        FrameColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
+                        TextColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 }
                     }
                 }
             };

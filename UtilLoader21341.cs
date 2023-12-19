@@ -47,13 +47,23 @@ namespace TheColorsMod_C21341
                 },
                 new CardOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 2, 16, 24, 36, 45, 52, 64 },
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 67, 68, 71, 72, 73, 74, 75, 76, 78, 79 },
+                    Option = CardOption.OnlyPage,
+                    Keywords = new List<string> { "RenoPage_C21341", "EvolvePage_C21341" },
+                    BookId = new List<LorIdRoot>
+                        { new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000007 } }
+                },
+                new CardOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 2, 16, 24, 36, 45, 52, 64, 69 },
                     Option = CardOption.EgoPersonal
                 },
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65 }, Option = CardOption.Personal
+                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65, 70, 77 },
+                    Option = CardOption.Personal
                 }
             };
         }
@@ -67,9 +77,9 @@ namespace TheColorsMod_C21341
                     PackageId = TheColorsModParameters.PackageId, AdditionalValue = "1",
                     CustomIconSpriteId = "Light_C21341", CategoryNameId = "TheColorsC21341.Mod",
                     CredenzaBooksId = new List<int>
-                        { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000900 },
+                        { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900 },
                     CategoryBooksId = new List<int>
-                        { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000900, 10000901 }
+                        { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900, 10000901 }
                 }
             };
         }
@@ -94,6 +104,8 @@ namespace TheColorsMod_C21341
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000005 } },
                         new ItemQuantityRoot
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000006 } },
+                        new ItemQuantityRoot
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000007 } },
                         new ItemQuantityRoot
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000900 } },
                         new ItemQuantityRoot
@@ -261,6 +273,56 @@ namespace TheColorsMod_C21341
                         {
                             LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 62 },
                             Quantity = 6
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 67 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 68 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 71 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 72 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 73 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 74 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 75 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 76 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 78 },
+                            Quantity = 1
+                        },
+                        new ItemQuantityRoot
+                        {
+                            LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 79 },
+                            Quantity = 1
                         }
                     }
                 }
@@ -309,6 +371,11 @@ namespace TheColorsMod_C21341
                 {
                     PackageId = TheColorsModParameters.PackageId, KeypageId = 10000006, EveryoneCanEquip = true,
                     BookCustomOptions = new BookCustomOptionRoot { NameTextId = 6 }
+                },
+                new KeypageOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, KeypageId = 10000007, EveryoneCanEquip = true,
+                    BookCustomOptions = new BookCustomOptionRoot { NameTextId = 7 }
                 },
                 new KeypageOptionRoot
                 {
@@ -397,6 +464,102 @@ namespace TheColorsMod_C21341
                             }
                         }
                     }
+                },
+                new SkinOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, SkinName = "Miyu_C21341",
+                    MotionSounds = new List<MotionSoundOptionRoot>
+                    {
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.J,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Yuzin_Special_Atk", IsBaseSoundWin = true,
+                                FileNameLose = "Yuzin_Special_Atk", IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.Z,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Puppet_thorn", IsBaseSoundWin = true, FileNameLose = "Puppet_thorn",
+                                IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.F,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Philip_FilterOn", IsBaseSoundWin = true,
+                                FileNameLose = "Philip_FilterOn", IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S1,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Claw_Heal", IsBaseSoundWin = true, FileNameLose = "Claw_Heal",
+                                IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S4,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Claw_Heal", IsBaseSoundWin = true, FileNameLose = "Claw_Heal",
+                                IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S5,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Claw_Heal", IsBaseSoundWin = true, FileNameLose = "Claw_Heal",
+                                IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S2,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Binah_Chain", IsBaseSoundWin = true, FileNameLose = "Binah_Chain",
+                                IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S8,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Philip_FilterOn", IsBaseSoundWin = true,
+                                FileNameLose = "Philip_FilterOn", IsBaseSoundLose = true
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.H,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "WaterMagic_C21341.ogg", FileNameLose = "WaterMagic_C21341.ogg"
+                            }
+                        },
+                        new MotionSoundOptionRoot
+                        {
+                            Motion = MotionDetail.S9,
+                            MotionSound = new MotionSoundRoot
+                            {
+                                FileNameWin = "Xiao_DragonUp_End", IsBaseSoundWin = true,
+                                FileNameLose = "Xiao_DragonUp_End", IsBaseSoundLose = true
+                            }
+                        }
+                    }
                 }
             };
         }
@@ -442,6 +605,11 @@ namespace TheColorsMod_C21341
                 },
                 new CustomSkinOptionRoot
                 {
+                    PackageId = TheColorsModParameters.PackageId, SkinName = "Miyu_C21341", KeypageId = 10000007,
+                    CharacterNameId = 7
+                },
+                new CustomSkinOptionRoot
+                {
                     PackageId = TheColorsModParameters.PackageId, SkinName = "Wonderland_C21341", KeypageId = 10000900,
                     CharacterNameId = 90
                 }
@@ -481,6 +649,11 @@ namespace TheColorsMod_C21341
                 {
                     PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000006 },
                     SpritePK = "RazielDefault_C21341"
+                },
+                new SpriteOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000007 },
+                    SpritePK = "MiyuDefault_C21341"
                 },
                 new SpriteOptionRoot
                 {
