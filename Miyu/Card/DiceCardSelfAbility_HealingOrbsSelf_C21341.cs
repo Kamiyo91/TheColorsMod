@@ -19,12 +19,17 @@ namespace TheColorsMod_C21341.Miyu.Card
 
         public override bool IsValidTarget(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {
-            return targetUnit == owner;
+            return true;
         }
 
         public override bool IsTargetableSelf()
         {
             return true;
+        }
+
+        public override bool IsOnlyAllyUnit()
+        {
+            return false;
         }
 
         public override void OnUseCard()
