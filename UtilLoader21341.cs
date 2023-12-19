@@ -67,13 +67,20 @@ namespace TheColorsMod_C21341
                 },
                 new CardOptionRoot
                 {
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 77 },
+                    Option = CardOption.Personal,
+                    ForceAggro = true
+                },
+                new CardOptionRoot
+                {
                     PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 2, 16, 24, 36, 45, 52, 64, 69 },
                     Option = CardOption.EgoPersonal
                 },
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65, 70, 77 },
+                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65, 70 },
                     Option = CardOption.Personal
                 }
             };
