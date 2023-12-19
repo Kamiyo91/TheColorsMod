@@ -8,6 +8,7 @@
             {
                 return new[]
                 {
+                    "Healer_C21341",
                     "MagicShield_C21341"
                 };
             }

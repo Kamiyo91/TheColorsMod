@@ -52,6 +52,7 @@ namespace TheColorsMod_C21341
                          .Where(x => !TheColorsModParameters.MiyuDeck.Contains(x.GetID())))
             {
                 card.CopySelf();
+                card.XmlData.Spec.Copy();
                 card.XmlData.Spec.Ranged = CardRange.Far;
                 if (notChangeDie) continue;
                 foreach (var dice in card.GetBehaviourList())
@@ -64,15 +65,5 @@ namespace TheColorsMod_C21341
             var tryGetValue = TheColorsModParameters.MiyuEffects.TryGetValue(dice.MotionDetail, out var effect);
             if (tryGetValue) dice.EffectRes = effect;
         }
-        //public void ChangeNearToFar(BattleDiceCardModel card)
-        //{
-        //    if (card._xmlData.Spec.Ranged != CardRange.Far)
-        //    {
-        //        return;
-        //    }
-        //    var diceCardSpec = card._xmlData.Spec.Copy();
-        //    diceCardSpec.Ranged = CardRange.Near;
-        //    card._xmlData.Spec = diceCardSpec;
-        //}
     }
 }

@@ -9,9 +9,10 @@ namespace TheColorsMod_C21341.Miyu.Card
 
         public override void OnUseCard()
         {
-            foreach (var unit in BattleObjectManager.instance.GetAliveList(owner.faction))
+            foreach (var unit in BattleObjectManager.instance.GetAliveList(owner.faction).Where(x => x != owner))
                 unit.UnitReviveAndRecovery(unit.MaxHp, true);
-            foreach (var unit in BattleObjectManager.instance.GetList(owner.faction).Where(x => x.IsDead()))
+            foreach (var unit in BattleObjectManager.instance.GetList(owner.faction)
+                         .Where(x => x != owner && x.IsDead()))
                 unit.UnitReviveAndRecovery(unit.MaxHp, true);
         }
 
