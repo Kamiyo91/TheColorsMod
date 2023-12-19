@@ -115,9 +115,11 @@
     <Compile Include="Miyu\Buff\BattleUnitBuf_MagicOrbs_C21341.cs" />
     <Compile Include="Miyu\Buff\BattleUnitBuf_Mana_C21341.cs" />
     <Compile Include="Miyu\Buff\BattleUnitBuf_Shield_C21341.cs" />
+    <Compile Include="Miyu\Card\DiceCardSelfAbility_HealingOrbsSelf_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_LaserBarricade_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_LastMagicCall_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_MiyuCommonCard_C21341.cs" />
+    <Compile Include="Miyu\Card\DiceCardSelfAbility_ShieldSelf_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_Shield_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_HealingOrbs_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_ThunderBlade_C21341.cs" />

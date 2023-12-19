@@ -36,10 +36,5 @@
         {
             return true;
         }
-
-        public override bool IsTargetableSelf()
-        {
-            return true;
-        }
     }
 }

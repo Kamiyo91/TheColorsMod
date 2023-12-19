@@ -15,6 +15,8 @@ namespace TheColorsMod_C21341.Miyu.Passive
             if (owner.faction == Faction.Enemy)
                 owner.allyCardDetail.AddNewCardToDeck(new LorId(TheColorsModParameters.PackageId, 908));
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 69));
+            owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 82));
+            owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 83));
             owner.personalEgoDetail.AddCard(_sacraficeCard);
             owner.personalEgoDetail.AddCard(_specialCard);
         }

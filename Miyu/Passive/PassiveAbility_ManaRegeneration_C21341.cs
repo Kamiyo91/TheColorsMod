@@ -5,7 +5,7 @@ namespace TheColorsMod_C21341.Miyu.Passive
 {
     public class PassiveAbility_ManaRegeneration_C21341 : PassiveAbilityBase
     {
-        public override void OnRoundEndTheLast()
+        public override void OnRoundEnd()
         {
             owner.cardSlotDetail.RecoverPlayPoint(1);
             if (owner.allyCardDetail.IsHighlander() &&
