@@ -1,4 +1,6 @@
-﻿using TheColorsMod_C21341.Miyu.Buff;
+﻿using System.Linq;
+using LOR_DiceSystem;
+using TheColorsMod_C21341.Miyu.Buff;
 using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Passive
@@ -19,6 +21,8 @@ namespace TheColorsMod_C21341.Miyu.Passive
 
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
+            if (curCard.GetDiceBehaviorList().Any(x => x.Type != BehaviourType.Standby))
+                owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(1);
             var cardId = curCard.card.GetID();
             if (cardId.packageId == TheColorsModParameters.PackageId && cardId.id == _sacraficeCard.id)
                 owner.personalEgoDetail.RemoveCard(_sacraficeCard);

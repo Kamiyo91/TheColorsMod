@@ -52,8 +52,9 @@ namespace TheColorsMod_C21341
                          .Where(x => !TheColorsModParameters.MiyuDeck.Contains(x.GetID())))
             {
                 card.CopySelf();
-                card.XmlData.Spec.Copy();
-                card.XmlData.Spec.Ranged = CardRange.Far;
+                var copiedSpec = card.XmlData.Spec.Copy();
+                copiedSpec.Ranged = CardRange.Far;
+                card.XmlData.Spec = copiedSpec;
                 if (notChangeDie) continue;
                 foreach (var dice in card.GetBehaviourList())
                     ChangeCardDiceEffectMiyu(dice);
