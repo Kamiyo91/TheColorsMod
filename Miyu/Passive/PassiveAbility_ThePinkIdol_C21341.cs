@@ -27,9 +27,7 @@ namespace TheColorsMod_C21341.Miyu.Passive
         {
             if (curCard.GetDiceBehaviorList().Any(x => x.Type != BehaviourType.Standby))
                 owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(10);
-            var cardId = curCard.card.GetID();
-            if (cardId.packageId == TheColorsModParameters.PackageId && cardId.id == _manaShieldCard.id)
-                owner.personalEgoDetail.AddCard(_manaShieldCard);
+            //var cardId = curCard.card.GetID();
             //if (cardId.packageId == TheColorsModParameters.PackageId && cardId.id == _sacraficeCard.id)
             //    owner.personalEgoDetail.RemoveCard(_sacraficeCard);
         }
