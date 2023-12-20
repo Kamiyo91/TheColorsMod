@@ -26,7 +26,7 @@ namespace TheColorsMod_C21341.Miyu.Effect
 
         public override void SetScale(float scaleFactor)
         {
-            base.SetScale(DiceEffectUtil.CalculateScale(false, scaleFactor, 1f));
+            base.SetScale(DiceEffectUtil.CalculateScale(false, scaleFactor, 0.75f));
         }
     }
 }

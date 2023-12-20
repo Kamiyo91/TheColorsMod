@@ -40,7 +40,6 @@ namespace TheColorsMod_C21341.Miyu.Card
             var randomNumber = _random.Next(1, 10);
             owner.RecoverHP(randomNumber);
             owner.breakDetail.RecoverBreak(randomNumber);
-            owner.allyCardDetail.DrawCards(1);
             owner.OnAddBuff<BattleUnitBuf_Shield_C21341>(0);
         }
     }

@@ -9,7 +9,7 @@ namespace TheColorsMod_C21341.Miyu.Buff
 
         public override void OnAddBuf(int addedStack)
         {
-            this.OnAddBufCustom(addedStack, maxStack: 15);
+            this.OnAddBufCustom(addedStack, maxStack: 100);
         }
     }
 }

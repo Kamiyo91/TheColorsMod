@@ -80,7 +80,7 @@ namespace TheColorsMod_C21341
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65, 70, 82, 83 },
+                    Ids = new List<int> { 1, 8, 9, 19, 25, 27, 28, 29, 37, 58, 65, 70, 82, 83, 84 },
                     Option = CardOption.Personal
                 }
             };

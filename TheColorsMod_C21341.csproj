@@ -111,13 +111,18 @@
     <Compile Include="Mio\Passive\PassiveAbility_MysticEyesOfHeaven_C21341.cs" />
     <Compile Include="Miyu\Action\BehaviourAction_MiyuMagic5_C21341.cs" />
     <Compile Include="Miyu\Action\BehaviourAction_MiyuSacrifice_C21341.cs" />
+    <Compile Include="Miyu\Action\BehaviourAction_SupportAttackBuff_C21341.cs" />
+    <Compile Include="Miyu\Action\BehaviourAction_SupportAttackShield_C21341.cs" />
+    <Compile Include="Miyu\Action\BehaviourAction_SupportAttackHeal_C21341.cs" />
     <Compile Include="Miyu\Action\FarAreaEffect_MiyuSacrifice_C21341.cs" />
     <Compile Include="Miyu\Buff\BattleUnitBuf_MagicOrbs_C21341.cs" />
+    <Compile Include="Miyu\Buff\BattleUnitBuf_ManaShield_C21341.cs" />
     <Compile Include="Miyu\Buff\BattleUnitBuf_Mana_C21341.cs" />
     <Compile Include="Miyu\Buff\BattleUnitBuf_Shield_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_HealingOrbsSelf_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_LaserBarricade_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_LastMagicCall_C21341.cs" />
+    <Compile Include="Miyu\Card\DiceCardSelfAbility_ManaShield_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_MiyuCommonCard_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_ShieldSelf_C21341.cs" />
     <Compile Include="Miyu\Card\DiceCardSelfAbility_Shield_C21341.cs" />
@@ -132,7 +137,7 @@
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic11_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic10_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic2Self_C21341.cs" />
-    <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic6Self_C21341.cs" />
+    <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic13Self_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic9_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic8_C21341.cs" />
     <Compile Include="Miyu\Effect\DiceAttackEffect_MiyuMagic7_C21341.cs" />

@@ -66,7 +66,7 @@ namespace TheColorsMod_C21341
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 67, 68, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 82, 83, 908 },
+                    Ids = new List<int> { 67, 68, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 82, 83, 84, 908 },
                     CardColorOptions = new CardColorOptionRoot
                     {
                         CardColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },

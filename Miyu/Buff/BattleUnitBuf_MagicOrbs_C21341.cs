@@ -19,9 +19,12 @@ namespace TheColorsMod_C21341.Miyu.Buff
                                      attacker.Book.GetBookClassInfoId().id == 10000007)) return;
             attacker.allyCardDetail.DrawCards(1);
             attacker.cardSlotDetail.RecoverPlayPoint(1);
-            SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("MiyuMagic6Self_C21341", 1f,
-                _owner.view, _owner.view);
-            SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
+            _owner.battleCardResultLog.SetTakeDamagedEvent(delegate
+            {
+                SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("MiyuMagic6Self_C21341", 1f,
+                    _owner.view, _owner.view);
+                SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
+            });
             _owner.bufListDetail.RemoveBuf(this);
         }
 

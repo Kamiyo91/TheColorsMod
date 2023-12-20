@@ -52,7 +52,6 @@ namespace TheColorsMod_C21341.Kamiyo.Action
                     EffectTiming.PRE,
                     EffectTiming.PRE)
             };
-            ;
         }
 
         private static List<RencounterManager.MovingAction> SetDamageEnemy()

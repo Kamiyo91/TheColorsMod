@@ -36,9 +36,12 @@ namespace TheColorsMod_C21341.Miyu.Buff
 
         public override int GetDamageReduction(BattleDiceBehavior behavior)
         {
-            SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("MiyuMagic2Self_C21341", 1f,
-                _owner.view, _owner.view);
-            SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
+            _owner.battleCardResultLog.SetTakeDamagedEvent(delegate
+            {
+                SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("MiyuMagic2Self_C21341", 1f,
+                    _owner.view, _owner.view);
+                SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
+            });
             return base.GetDamageReduction(behavior);
         }
 

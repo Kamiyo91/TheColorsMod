@@ -37,8 +37,6 @@ namespace TheColorsMod_C21341.Miyu.Card
             var randomNumber = _random.Next(2, 20);
             owner.RecoverHP(randomNumber);
             owner.breakDetail.RecoverBreak(randomNumber);
-            owner.cardSlotDetail.RecoverPlayPointByCard(1);
-            owner.allyCardDetail.DrawCards(1);
         }
     }
 }
