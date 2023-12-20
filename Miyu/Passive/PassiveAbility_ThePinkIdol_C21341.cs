@@ -21,6 +21,7 @@ namespace TheColorsMod_C21341.Miyu.Passive
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 84));
             //owner.personalEgoDetail.AddCard(_sacraficeCard);
             owner.personalEgoDetail.AddCard(_specialCard);
+            owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(10);
         }
 
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
