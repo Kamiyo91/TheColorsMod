@@ -22,14 +22,11 @@ namespace TheColorsMod_C21341.Miyu.Buff
             var manaBuff = _owner.GetActiveBuff<BattleUnitBuf_Mana_C21341>();
             if (manaBuff == null || dmg * 2 > manaBuff.stack) RemoveBuff();
             ManaShieldActive = true;
-            _owner.battleCardResultLog.SetSucceedAtkEvent(delegate
+            _owner.battleCardResultLog.SetTakeDamagedEvent(delegate
             {
                 SingletonBehavior<AttackEffectManager>.Instance.CreateDamagedTextEffectCustom(dmg * 2,
                     _owner, AtkResist.Normal, Color.blue, "", attacker,
                     ArtUtil.GetSpriteFromArtworks(TheColorsModParameters.PackageId, "ManaShield_C21341"));
-            });
-            _owner.battleCardResultLog.SetTakeDamagedEvent(delegate
-            {
                 SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("MiyuMagic13Self_C21341", 1f,
                     _owner.view, _owner.view);
                 SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
