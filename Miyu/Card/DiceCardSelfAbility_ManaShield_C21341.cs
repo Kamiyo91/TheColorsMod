@@ -5,6 +5,17 @@ namespace TheColorsMod_C21341.Miyu.Card
 {
     public class DiceCardSelfAbility_ManaShield_C21341 : DiceCardSelfAbilityBase
     {
+        public override string[] Keywords
+        {
+            get
+            {
+                return new[]
+                {
+                    "ManaShieldCard_C21341"
+                };
+            }
+        }
+
         public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {
             Activate(unit);
