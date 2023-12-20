@@ -19,7 +19,6 @@ namespace TheColorsMod_C21341.Miyu.Card
         public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {
             Activate(unit);
-            self.exhaust = true;
         }
 
         private static void Activate(BattleUnitModel unit)

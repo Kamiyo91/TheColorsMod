@@ -12,7 +12,7 @@ namespace TheColorsMod_C21341.Miyu.Effect
         {
             base.Initialize(self, target, destroyTime);
             _duration = destroyTime;
-            DiceEffectUtil.InitializeEffect(TheColorsModParameters.Path, 0.50f, 0.20f, false, this, self, self);
+            DiceEffectUtil.InitializeEffect(TheColorsModParameters.Path, 0.50f, 0.3f, false, this, self, self);
         }
 
 
