@@ -1,4 +1,5 @@
 ﻿using Sound;
+using TheColorsMod_C21341.Zero.Passive;
 using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Zero.Buff
@@ -24,13 +25,13 @@ namespace TheColorsMod_C21341.Zero.Buff
 
             if (_owner.GetActiveBuff<BattleUnitBuf_BlueFlameEgo_C21341>() != null) return;
             stack = stack * 2 / 3;
-            if (stack <= 0)
+            if (stack <= 0 || _owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null)
                 _owner.bufListDetail.RemoveBuf(this);
         }
 
         public void AddBuffCustom(int addedStack)
         {
-            this.OnAddBufCustom(addedStack, true, 0, 999);
+            this.OnAddBufCustom(addedStack, _owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null, 0, 999);
         }
 
         private void PrintEffect()

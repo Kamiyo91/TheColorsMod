@@ -238,6 +238,7 @@
     <Compile Include="Zero\Effect\FarAreaEffect_TheBlueFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_AnOldFriendBlueFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_BlueBurn_C21341.cs" />
+    <Compile Include="Zero\Passive\PassiveAbility_BlueFlameSword_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_InnerFlame_C21341.cs" />
     <Compile Include="Zero\Passive\PassiveAbility_Zero_C21341.cs" />
   </ItemGroup>
