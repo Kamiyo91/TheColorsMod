@@ -24,6 +24,11 @@ namespace TheColorsMod_C21341.Zero.Buff
             _buff = owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(0) as BattleUnitBuf_BlueBurn_C21341;
         }
 
+        public override void OnRoundStart()
+        {
+            _buff = _owner.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>();
+        }
+
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             behavior.ApplyDiceStatBonus(new DiceStatBonus
@@ -34,7 +39,7 @@ namespace TheColorsMod_C21341.Zero.Buff
 
         public override void OnRoundStartAfter()
         {
-            _buff.OnAddBuf(2);
+            _buff?.OnAddBuf(2);
         }
 
         private void InitAuraAndPlaySound()
@@ -45,12 +50,12 @@ namespace TheColorsMod_C21341.Zero.Buff
 
         public override int GetDamageReductionRate()
         {
-            return _buff.stack;
+            return _buff?.stack ?? base.GetDamageReductionRate();
         }
 
         public override int GetBreakDamageReductionRate()
         {
-            return _buff.stack;
+            return _buff?.stack ?? base.GetBreakDamageReductionRate();
         }
     }
 }
