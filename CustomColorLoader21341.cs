@@ -66,11 +66,58 @@ namespace TheColorsMod_C21341
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 67, 68, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 82, 83, 84, 908 },
+                    Ids = new List<int> { 67, 70, 71, 72, 73, 74, 75, 77, 78, 82, 83, 84, 908 },
                     CardColorOptions = new CardColorOptionRoot
                     {
                         CardColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
                         CustomIconColor = new ColorRoot { R = 140, G = 41, B = 72, A = 255 }, UseHSVFilter = false
+                    }
+                },
+                new CardOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 68 },
+                    CardColorOptions = new CardColorOptionRoot
+                    {
+                        CardColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
+                        CustomIconColor = new ColorRoot { R = 140, G = 41, B = 72, A = 255 }, UseHSVFilter = false,
+                        CustomDiceIcon = new List<CustomDiceIconRoot>
+                        {
+                            new CustomDiceIconRoot
+                            {
+                                PackageId = "CustomColorUtil21341", KeywordIconId = "HealHitDie",
+                                KeywordIconIdClash = "HealSlashCombatDie",
+                                DiceColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 },
+                                TextColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 }, DiceNumber = 0
+                            },
+                            new CustomDiceIconRoot
+                            {
+                                PackageId = "CustomColorUtil21341", KeywordIconId = "HealHitDie",
+                                KeywordIconIdClash = "HealSlashCombatDie",
+                                DiceColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 },
+                                TextColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 }, DiceNumber = 1
+                            }
+                        }
+                    }
+                },
+                new CardOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId,
+                    Ids = new List<int> { 76, 79 },
+                    CardColorOptions = new CardColorOptionRoot
+                    {
+                        CardColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
+                        CustomIconColor = new ColorRoot { R = 140, G = 41, B = 72, A = 255 }, UseHSVFilter = false,
+                        CustomDiceIcon = new List<CustomDiceIconRoot>
+                        {
+                            new CustomDiceIconRoot
+                            {
+                                PackageId = "CustomColorUtil21341", KeywordIconId = "HealHitDie",
+                                KeywordIconIdClash = "HealSlashCombatDie",
+                                DiceColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 },
+                                TextColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 }, DiceNumber = 0
+                            }
+                        }
                     }
                 }
             };

@@ -31,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="1CustomColorUtil">
+    <Reference Include="1CustomColorUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\CustomColorUtil\CustomColorUtil\bin\Release\1CustomColorUtil.dll</HintPath>
     </Reference>
     <Reference Include="1UtilLoader21341">
