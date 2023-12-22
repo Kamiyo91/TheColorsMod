@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using LOR_DiceSystem;
 using TheColorsMod_C21341.Miyu.Buff;
-using UnityEngine;
 using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Passive
@@ -46,16 +45,6 @@ namespace TheColorsMod_C21341.Miyu.Passive
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 82));
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 83));
             owner.personalEgoDetail.AddCard(_manaShieldCard);
-        }
-
-        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
-        {
-            owner.battleCardResultLog.SetSucceedAtkEvent(delegate
-            {
-                SingletonBehavior<AttackEffectManager>.Instance.CreateDamagedTextEffectCustom(behavior.DiceResultValue,
-                    behavior.card.target, AtkResist.Normal, Color.blue, "", owner,
-                    ArtUtil.GetSpriteFromArtworks(TheColorsModParameters.PackageId, "ManaShield_C21341"));
-            });
         }
     }
 }

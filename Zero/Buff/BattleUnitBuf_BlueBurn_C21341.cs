@@ -8,7 +8,11 @@ namespace TheColorsMod_C21341.Zero.Buff
     {
         public override KeywordBuf bufType => KeywordBuf.Burn;
         public override BufPositiveType positiveType => BufPositiveType.Negative;
-        protected override string keywordId => "Burn";
+
+        protected override string keywordId => _owner?.GetActivePassive<PassiveAbility_Zero_C21341>() == null
+            ? "Burn"
+            : "BurnZero_C21341";
+
         protected override string keywordIconId => "BlueFlame_C21341";
 
         public override void OnRoundEnd()

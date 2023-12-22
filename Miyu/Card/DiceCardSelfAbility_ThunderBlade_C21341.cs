@@ -10,15 +10,17 @@ namespace TheColorsMod_C21341.Miyu.Card
             return owner.GetActiveBuff<BattleUnitBuf_Mana_C21341>()?.stack > 99 && !owner.cardSlotDetail.cardAry.Exists(
                 x =>
                     x?.card?.GetID() == new LorId(TheColorsModParameters.PackageId, 69));
-            ;
         }
 
-
-        public override void OnUseCard()
+        public override void OnStartBattle()
         {
             owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(-100);
             if (owner.GetActiveBuff<BattleUnitBuf_Mana_C21341>()?.stack < 1)
                 owner.GetActiveBuff<BattleUnitBuf_ManaShield_C21341>()?.RemoveBuff();
+        }
+
+        public override void OnUseCard()
+        {
             if (card?.target?.currentDiceAction?.cardBehaviorQueue.Count > 0)
                 card?.target?.currentDiceAction?.DestroyDice(DiceMatch.AllDice);
         }
