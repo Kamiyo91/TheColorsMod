@@ -7,7 +7,10 @@ namespace TheColorsMod_C21341.Zero.Buff
     public class BattleUnitBuf_BlueBurn_C21341 : BattleUnitBuf
     {
         public override KeywordBuf bufType => KeywordBuf.Burn;
-        public override BufPositiveType positiveType => BufPositiveType.Negative;
+
+        public override BufPositiveType positiveType => _owner?.GetActivePassive<PassiveAbility_Zero_C21341>() == null
+            ? BufPositiveType.Negative
+            : BufPositiveType.Positive;
 
         protected override string keywordId => _owner?.GetActivePassive<PassiveAbility_Zero_C21341>() == null
             ? "Burn"
