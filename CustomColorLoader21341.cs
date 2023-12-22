@@ -93,7 +93,7 @@ namespace TheColorsMod_C21341
                             new CustomDiceIconRoot
                             {
                                 PackageId = "CustomColorUtil21341", KeywordIconId = "HealHitDie",
-                                KeywordIconIdClash = "HealSlashCombatDie",
+                                KeywordIconIdClash = "HealHitCombatDie",
                                 DiceColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 },
                                 TextColor = new ColorRoot { R = 0, G = 255, B = 0, A = 255 }, DiceNumber = 1
                             }
