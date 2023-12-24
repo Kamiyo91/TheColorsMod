@@ -97,7 +97,10 @@ namespace TheColorsMod_C21341
                     CredenzaBooksId = new List<int>
                         { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900 },
                     CategoryBooksId = new List<int>
-                        { 10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900, 10000901 }
+                    {
+                        10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900, 10000901,
+                        10000902
+                    }
                 }
             };
         }
@@ -127,7 +130,9 @@ namespace TheColorsMod_C21341
                         new ItemQuantityRoot
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000900 } },
                         new ItemQuantityRoot
-                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000901 } }
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000901 } },
+                        new ItemQuantityRoot
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000902 } }
                     },
                     Cards = new List<ItemQuantityRoot>
                     {
@@ -437,6 +442,49 @@ namespace TheColorsMod_C21341
                 {
                     PackageId = TheColorsModParameters.PackageId, PassiveId = 29,
                     ForceAggroOptions = new ForceAggroOptionsRoot { ForceAggro = true }
+                },
+                new PassiveOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, PassiveId = 37,
+                    CustomFloorOptions = new CustomFloorOptionRoot
+                    {
+                        PackageId = "LorModPackRe21341.Mod",
+                        IconId = "LorModPackRe21341.Mod",
+                        FloorNameId = "KurosawaFloor_21341",
+                        CustomFloorMap = new MapModelRoot
+                        {
+                            Component = "HayateSephirah_Re21341MapManager",
+                            Stage = "Hayate_Re21341",
+                            Bgy = 0.3f,
+                            Fy = 0.475f
+                        },
+                        EgoCardsId = new List<LorIdRoot>
+                        {
+                            new LorIdRoot { Id = 21356, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21357, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21358, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21359, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21360, PackageId = "LorModPackRe21341.Mod" }
+                        },
+                        EmotionCardsId = new List<LorIdRoot>
+                        {
+                            new LorIdRoot { Id = 21341, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21342, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21343, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21344, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21345, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21346, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21347, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21348, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21349, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21350, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21351, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21352, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21353, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21354, PackageId = "LorModPackRe21341.Mod" },
+                            new LorIdRoot { Id = 21355, PackageId = "LorModPackRe21341.Mod" }
+                        }
+                    }
                 }
             };
         }

@@ -70,6 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomColorLoader21341.cs" />
+    <Compile Include="CustomFloor\DiceCardSelfAbility_EgoOneScene_C21341.cs" />
+    <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_MioFloorEgo_C21341.cs" />
+    <Compile Include="CustomFloor\FloorMap\ColorsFloor_C21341MapManager.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionClone_C21341.cs" />
+    <Compile Include="CustomFloor\PassiveAbility_CustomFloor_C21341.cs" />
     <Compile Include="EffectUtil.cs" />
     <Compile Include="Kamiyo\Action\BehaviourAction_BlackFlame_C21341.cs" />
     <Compile Include="Kamiyo\AuraColor.cs" />
