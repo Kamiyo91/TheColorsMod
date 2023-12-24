@@ -1,13 +1,17 @@
-﻿using System.Linq;
-
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard
 {
     public class EmotionCardAbility_EmotionClone_C21341 : EmotionCardAbilityBase
     {
+        private readonly LorId _cloneCard = new LorId(TheColorsModParameters.PackageId, 1);
+
         public override void OnSelectEmotion()
         {
-            foreach (var unit in BattleObjectManager.instance.GetAliveList().Where(x => x != _owner))
-                unit.TakeDamage(50);
+            _owner.personalEgoDetail.AddCard(_cloneCard);
+        }
+
+        public override void OnWaveStart()
+        {
+            _owner.personalEgoDetail.AddCard(_cloneCard);
         }
     }
 }

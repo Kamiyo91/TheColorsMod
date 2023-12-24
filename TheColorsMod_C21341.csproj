@@ -70,11 +70,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomColorLoader21341.cs" />
+    <Compile Include="CustomFloor\Buff\BattleUnitBuf_EmotionPreyOwner_C21341.cs" />
+    <Compile Include="CustomFloor\Buff\BattleUnitBuf_EmotionPrey_C21341.cs" />
+    <Compile Include="CustomFloor\Buff\BattleUnitBuf_ManaShieldEmotion_C21341.cs" />
+    <Compile Include="CustomFloor\Buff\BattleUnitBuf_EmotionShield_C21341.cs" />
     <Compile Include="CustomFloor\DiceCardSelfAbility_EgoOneScene_C21341.cs" />
+    <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_MiyuFloorEgo_C21341.cs" />
+    <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_WonderlandFloorEgo_C21341.cs" />
+    <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_RenoFloorEgo_C21341.cs" />
+    <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_ZeroFloorEgo_C21341.cs" />
     <Compile Include="CustomFloor\EgoCard\DiceCardSelfAbility_MioFloorEgo_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionFire_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionDown_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionEmergencyStocks_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionFiery_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionHollow_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionMagicShield_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionManaShield_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionMio_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionPrey_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionQuickness_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionRush_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionScar_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionTurbulence_C21341.cs" />
+    <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_LastMagicCall_C21341.cs" />
     <Compile Include="CustomFloor\FloorMap\ColorsFloor_C21341MapManager.cs" />
     <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionClone_C21341.cs" />
-    <Compile Include="CustomFloor\PassiveAbility_CustomFloor_C21341.cs" />
+    <Compile Include="CustomFloor\Passive\PassiveAbility_Clone_C21341.cs" />
+    <Compile Include="CustomFloor\Passive\PassiveAbility_CustomFloor_C21341.cs" />
+    <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_LastMagicCallEmotion_C21341.cs" />
+    <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_SummonCloneEmotion_C21341.cs" />
     <Compile Include="EffectUtil.cs" />
     <Compile Include="Kamiyo\Action\BehaviourAction_BlackFlame_C21341.cs" />
     <Compile Include="Kamiyo\AuraColor.cs" />

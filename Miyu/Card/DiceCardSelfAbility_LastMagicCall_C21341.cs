@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UtilLoader21341.Util;
+﻿using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Card
 {
@@ -9,11 +8,13 @@ namespace TheColorsMod_C21341.Miyu.Card
 
         public override void OnUseCard()
         {
-            foreach (var unit in BattleObjectManager.instance.GetAliveList(owner.faction).Where(x => x != owner))
-                unit.UnitReviveAndRecovery(unit.MaxHp, true);
-            foreach (var unit in BattleObjectManager.instance.GetList(owner.faction)
-                         .Where(x => x != owner && x.IsDead()))
-                unit.UnitReviveAndRecovery(unit.MaxHp, true);
+            foreach (var unit in BattleObjectManager.instance.GetAliveList(owner.faction.ReturnOtherSideFaction()))
+            {
+                unit.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Binding, 5, owner);
+                unit.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Weak, 5, owner);
+                unit.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Disarm, 5, owner);
+                unit.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Vulnerable, 5, owner);
+            }
         }
 
         public override void OnEndAreaAttack()

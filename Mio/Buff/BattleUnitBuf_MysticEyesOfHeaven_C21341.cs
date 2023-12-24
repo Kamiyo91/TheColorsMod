@@ -9,6 +9,7 @@ namespace TheColorsMod_C21341.Mio.Buff
     {
         private readonly Random _random = new Random();
         private bool _activated;
+        private AtkResist _resistType = AtkResist.Normal;
         protected override string keywordId => "MysticEyes_C21341";
         protected override string keywordIconId => "MysticEyes_C21341";
 
@@ -17,7 +18,7 @@ namespace TheColorsMod_C21341.Mio.Buff
             if (_activated || behavior?.card?.target == null) return;
             if (!behavior.card.CheckTargetSpeedByCard(1) ||
                 behavior.Detail == BehaviourDetail.Evasion || behavior.Detail == BehaviourDetail.Guard) return;
-            SetDebuff(behavior.card.target, behavior.Detail, AtkResist.Normal);
+            SetDebuff(behavior.card.target, behavior.Detail, _resistType);
             if (stack <= 9 && (stack <= 4 || _random.Next(0, 100) > stack * 10)) return;
             _activated = true;
             OnAddBuf(-99);
@@ -25,6 +26,10 @@ namespace TheColorsMod_C21341.Mio.Buff
             SetDebuff(behavior.card.target, behavior.Detail, AtkResist.Weak);
         }
 
+        public void SetResistType(AtkResist resistType)
+        {
+            _resistType = resistType;
+        }
 
         public override void BeforeGiveDamage(BattleDiceBehavior behavior)
         {
