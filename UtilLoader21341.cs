@@ -731,6 +731,11 @@ namespace TheColorsMod_C21341
                 {
                     PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000900, 10000901 },
                     SpritePK = "WonderlandDefault_C21341"
+                },
+                new SpriteOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000902 },
+                    SpritePK = "FragmentDefault_C21341"
                 }
             };
         }

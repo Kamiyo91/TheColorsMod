@@ -145,7 +145,7 @@ namespace TheColorsMod_C21341
             {
                 new KeypageOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000001 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000001, 10000902 },
                     KeypageColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 },
