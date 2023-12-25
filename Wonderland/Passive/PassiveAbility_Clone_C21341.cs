@@ -12,8 +12,6 @@ namespace TheColorsMod_C21341.Wonderland.Passive
 
         public override void OnWaveStart()
         {
-            var passive = owner.passiveDetail.AddPassive(new PassiveAbility_CloneHidedPassive_C21341());
-            passive.OnWaveStart();
             owner.OnAddBuff<BattleUnitBuf_Clone_C21341>(0);
         }
 

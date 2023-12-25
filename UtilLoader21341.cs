@@ -441,13 +441,13 @@ namespace TheColorsMod_C21341
                 },
                 new PassiveOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, PassiveId = 19, IsSupportPassive = true,
-                    BannedEgoAndEmotionCards = true
+                    PackageId = TheColorsModParameters.PackageId, PassiveId = 14, IsSupportPassive = true,
+                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true
                 },
                 new PassiveOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId, PassiveId = 38, IsSupportPassive = true,
-                    BannedEgoAndEmotionCards = true
+                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true
                 },
                 new PassiveOptionRoot
                 {
