@@ -20,6 +20,7 @@ namespace TheColorsMod_C21341.CustomFloor.SpecialCard
             clone.passiveDetail.PassiveList.Add(passive);
             passive.Init(clone);
             passive.OnWaveStart();
+            passive.SetNameAndDesc();
             UnitUtil.RefreshCombatUI();
             EffectUtil.HandleEgo(clone);
             var customBook = Singleton<BookInventoryModel>.Instance.GetBookListAll()

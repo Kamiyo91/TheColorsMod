@@ -446,6 +446,11 @@ namespace TheColorsMod_C21341
                 },
                 new PassiveOptionRoot
                 {
+                    PackageId = TheColorsModParameters.PackageId, PassiveId = 38, IsSupportPassive = true,
+                    BannedEgoAndEmotionCards = true
+                },
+                new PassiveOptionRoot
+                {
                     PackageId = TheColorsModParameters.PackageId, PassiveId = 29,
                     ForceAggroOptions = new ForceAggroOptionsRoot { ForceAggro = true }
                 },
