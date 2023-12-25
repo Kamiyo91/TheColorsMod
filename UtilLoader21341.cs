@@ -86,7 +86,7 @@ namespace TheColorsMod_C21341
                 new CardOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId,
-                    Ids = new List<int> { 2016, 2017, 2018, 2019, 2020 },
+                    Ids = new List<int> { 2016, 2017, 2018, 2019, 2020, 2026 },
                     Option = CardOption.EGO
                 }
             };
@@ -105,7 +105,7 @@ namespace TheColorsMod_C21341
                     CategoryBooksId = new List<int>
                     {
                         10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900, 10000901,
-                        10000902
+                        10000902, 10000903
                     }
                 }
             };
@@ -138,7 +138,9 @@ namespace TheColorsMod_C21341
                         new ItemQuantityRoot
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000901 } },
                         new ItemQuantityRoot
-                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000902 } }
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000902 } },
+                        new ItemQuantityRoot
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000903 } }
                     },
                     Cards = new List<ItemQuantityRoot>
                     {
@@ -496,6 +498,49 @@ namespace TheColorsMod_C21341
                             new LorIdRoot { Id = 2015, PackageId = TheColorsModParameters.PackageId }
                         }
                     }
+                },
+                new PassiveOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, PassiveId = 40,
+                    CustomFloorOptions = new CustomFloorOptionRoot
+                    {
+                        PackageId = TheColorsModParameters.PackageId,
+                        IconId = "TheColorFloorRage_C21341",
+                        FloorNameId = "TheColorFloorRage_C21341",
+                        CustomFloorMap = new MapModelRoot
+                        {
+                            Component = "ColorsFloorRage_C21341MapManager",
+                            Stage = "ColorsFloorRage_C21341",
+                            Bgy = 0.25f,
+                            Fy = 0.8f
+                        },
+                        EgoCardsId = new List<LorIdRoot>
+                        {
+                            new LorIdRoot { Id = 2026, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2017, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2018, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2019, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2020, PackageId = TheColorsModParameters.PackageId }
+                        },
+                        EmotionCardsId = new List<LorIdRoot>
+                        {
+                            new LorIdRoot { Id = 2023, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2024, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2025, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2004, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2005, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2006, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2007, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2008, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2009, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2010, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2011, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2012, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2013, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2014, PackageId = TheColorsModParameters.PackageId },
+                            new LorIdRoot { Id = 2015, PackageId = TheColorsModParameters.PackageId }
+                        }
+                    }
                 }
             };
         }
@@ -741,6 +786,11 @@ namespace TheColorsMod_C21341
                 {
                     PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000902 },
                     SpritePK = "FragmentDefault_C21341"
+                },
+                new SpriteOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000903 },
+                    SpritePK = "FragmentRedDefault_C21341"
                 }
             };
         }

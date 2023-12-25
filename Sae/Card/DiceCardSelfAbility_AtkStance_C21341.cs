@@ -1,4 +1,5 @@
-﻿using TheColorsMod_C21341.Sae.Buff;
+﻿using TheColorsMod_C21341.CustomFloor;
+using TheColorsMod_C21341.Sae.Buff;
 using TheColorsMod_C21341.Sae.Passive;
 using UtilLoader21341.Util;
 
@@ -22,6 +23,7 @@ namespace TheColorsMod_C21341.Sae.Card
             unit.ChangeStance<BattleUnitBuf_AtkStance_C21341>("Atk", 0);
             unit.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, unit);
             StanceUtil.DecreaseStacksBufType(unit, KeywordBuf.Endurance, 1);
+            StanceUtil.CheckEmotionCard(unit, StruggleEmotionType.Atk);
         }
 
         public override bool IsTargetableSelf()

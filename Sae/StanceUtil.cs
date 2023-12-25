@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Sound;
+using TheColorsMod_C21341.CustomFloor;
 using TheColorsMod_C21341.Sae.Buff;
 using UtilLoader21341.Util;
 
@@ -67,6 +68,15 @@ namespace TheColorsMod_C21341.Sae
             var buf = owner.bufListDetail.GetActivatedBufList().FirstOrDefault(x => x.bufType == bufType);
             if (buf != null) buf.stack -= stacks;
             if (buf != null && buf.stack < 1) owner.bufListDetail.RemoveBuf(buf);
+        }
+
+        public static void CheckEmotionCard(BattleUnitModel unit, StruggleEmotionType type)
+        {
+            var emotionCard = unit.emotionDetail.PassiveList.FirstOrDefault(x =>
+                x.AbilityList.Any(y => y is EmotionCardAbility_StanceType_C21341));
+            if (emotionCard == null) return;
+            foreach (var ability in emotionCard.AbilityList.OfType<EmotionCardAbility_StanceType_C21341>())
+                ability.SetType(type);
         }
     }
 }

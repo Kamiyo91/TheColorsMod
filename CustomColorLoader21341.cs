@@ -163,7 +163,7 @@ namespace TheColorsMod_C21341
                 },
                 new KeypageOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000003 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 10000003, 10000903 },
                     KeypageColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 },
@@ -233,7 +233,7 @@ namespace TheColorsMod_C21341
                 },
                 new PassiveOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 11 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 11, 40 },
                     PassiveColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 },
