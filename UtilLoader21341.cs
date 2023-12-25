@@ -105,7 +105,7 @@ namespace TheColorsMod_C21341
                     CategoryBooksId = new List<int>
                     {
                         10000001, 10000002, 10000003, 10000004, 10000005, 10000006, 10000007, 10000900, 10000901,
-                        10000902, 10000903
+                        10000902
                     }
                 }
             };
@@ -138,9 +138,7 @@ namespace TheColorsMod_C21341
                         new ItemQuantityRoot
                             { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000901 } },
                         new ItemQuantityRoot
-                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000902 } },
-                        new ItemQuantityRoot
-                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000903 } }
+                            { LorId = new LorIdRoot { PackageId = TheColorsModParameters.PackageId, Id = 10000902 } }
                     },
                     Cards = new List<ItemQuantityRoot>
                     {
