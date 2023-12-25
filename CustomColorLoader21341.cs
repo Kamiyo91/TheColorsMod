@@ -215,7 +215,7 @@ namespace TheColorsMod_C21341
             {
                 new PassiveOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 1 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 1, 37 },
                     PassiveColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 },
