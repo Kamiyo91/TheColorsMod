@@ -1,4 +1,5 @@
-﻿using TheColorsMod_C21341.Miyu.Buff;
+﻿using TheColorsMod_C21341.CustomFloor.Buff;
+using TheColorsMod_C21341.Miyu.Buff;
 using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Miyu.Dice
@@ -9,7 +10,8 @@ namespace TheColorsMod_C21341.Miyu.Dice
         {
             target.breakDetail.RecoverBreak(behavior.DiceResultValue);
             target.RecoverHP(behavior.DiceResultValue);
-            target.OnAddBuffCustom<BattleUnitBuf_Shield_C21341>(0, maxStack: 0);
+            if (target.GetActiveBuff<BattleUnitBuf_EmotionShield_C21341>() == null)
+                target.OnAddBuffCustom<BattleUnitBuf_Shield_C21341>(0, maxStack: 0);
         }
     }
 }

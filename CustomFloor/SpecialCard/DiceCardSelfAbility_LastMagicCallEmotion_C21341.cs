@@ -6,6 +6,11 @@ namespace TheColorsMod_C21341.CustomFloor.SpecialCard
     {
         public override string SkinName => "Miyu_C21341";
 
+        public override void OnStartBattle()
+        {
+            card.card.exhaust = true;
+        }
+
         public override void OnUseCard()
         {
             base.OnUseCard();

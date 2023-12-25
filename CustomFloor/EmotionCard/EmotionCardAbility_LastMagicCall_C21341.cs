@@ -4,7 +4,7 @@
     {
         public override void OnSelectEmotion()
         {
-            _owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 1));
+            _owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 2022));
         }
     }
 }

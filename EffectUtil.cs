@@ -2,7 +2,12 @@
 using System.Linq;
 using LOR_DiceSystem;
 using Sound;
+using TheColorsMod_C21341.Kamiyo.Passive;
+using TheColorsMod_C21341.Mio.Passive;
+using TheColorsMod_C21341.Reno.Passive;
+using TheColorsMod_C21341.Zero.Passive;
 using UnityEngine;
+using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341
 {
@@ -65,6 +70,14 @@ namespace TheColorsMod_C21341
         {
             var tryGetValue = TheColorsModParameters.MiyuEffects.TryGetValue(dice.MotionDetail, out var effect);
             if (tryGetValue) dice.EffectRes = effect;
+        }
+
+        public static void HandleEgo(BattleUnitModel owner)
+        {
+            owner.GetActivePassive<PassiveAbility_GodFragment_C21341>()?.ForcedEgo();
+            owner.GetActivePassive<PassiveAbility_TheBlackShadow_C21341>()?.ForcedEgo();
+            owner.GetActivePassive<PassiveAbility_TheGreenHunter_C21341>()?.ForcedEgo();
+            owner.GetActivePassive<PassiveAbility_Zero_C21341>()?.ForcedEgo();
         }
     }
 }

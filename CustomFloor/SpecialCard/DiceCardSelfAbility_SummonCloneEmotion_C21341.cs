@@ -21,6 +21,7 @@ namespace TheColorsMod_C21341.CustomFloor.SpecialCard
             passive.Init(clone);
             passive.OnWaveStart();
             UnitUtil.RefreshCombatUI();
+            EffectUtil.HandleEgo(clone);
             var customBook = Singleton<BookInventoryModel>.Instance.GetBookListAll()
                 .FirstOrDefault(x => x.BookId.Equals(new LorId(clone.Book.BookId.packageId, clone.Book.BookId.id)));
             if (customBook == null) return;
