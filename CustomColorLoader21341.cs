@@ -215,7 +215,7 @@ namespace TheColorsMod_C21341
             {
                 new PassiveOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 1, 37 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 1 },
                     PassiveColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 },
@@ -233,7 +233,7 @@ namespace TheColorsMod_C21341
                 },
                 new PassiveOptionRoot
                 {
-                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 11, 40 },
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 11 },
                     PassiveColorOptions = new ColorOptionsRoot
                     {
                         FrameColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 },
@@ -274,6 +274,34 @@ namespace TheColorsMod_C21341
                     {
                         FrameColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 },
                         TextColor = new ColorRoot { R = 140, G = 0, B = 72, A = 255 }
+                    }
+                },
+                new PassiveOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 37 },
+                    PassiveColorOptions = new ColorOptionsRoot
+                    {
+                        FrameColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 },
+                        TextColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 }
+                    },
+                    CustomDiceColorOptions = new CustomDiceColorOptionRoot
+                    {
+                        IconId = "ColorsFloorDefault_C21341",
+                        TextColor = new ColorRoot { R = 255, G = 255, B = 255, A = 255 }
+                    }
+                },
+                new PassiveOptionRoot
+                {
+                    PackageId = TheColorsModParameters.PackageId, Ids = new List<int> { 40 },
+                    PassiveColorOptions = new ColorOptionsRoot
+                    {
+                        FrameColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 },
+                        TextColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 }
+                    },
+                    CustomDiceColorOptions = new CustomDiceColorOptionRoot
+                    {
+                        IconId = "ColorsFloorRageDefault_C21341",
+                        TextColor = new ColorRoot { R = 153, G = 0, B = 0, A = 255 }
                     }
                 }
             };

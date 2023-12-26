@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="1CustomColorUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CommonDLL\1CustomColorUtil.dll</HintPath>
+      <HintPath>..\CustomColorUtil\bin\Release\1CustomColorUtil.dll</HintPath>
     </Reference>
     <Reference Include="1EmotionCardUtil">
       <HintPath>..\CommonDLL\1EmotionCardUtil.dll</HintPath>
