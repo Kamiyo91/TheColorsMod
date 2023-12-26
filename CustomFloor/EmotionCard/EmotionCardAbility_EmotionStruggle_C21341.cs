@@ -5,13 +5,13 @@
         public override void OnSucceedAttack(BattleDiceBehavior behavior)
         {
             if (Type != StruggleEmotionType.Atk) return;
-            if (_owner.hp <= _owner.MaxHp * 0.50f)
+            if (_owner.hp <= _owner.MaxHp * 0.45f)
             {
                 behavior.card.target?.TakeDamage(2);
                 behavior.card.target?.TakeBreakDamage(2);
             }
 
-            if (_owner.hp <= _owner.MaxHp * 0.25f)
+            if (_owner.hp <= _owner.MaxHp * 0.20f)
             {
                 behavior.card.target?.TakeDamage(2);
                 behavior.card.target?.TakeBreakDamage(2);
@@ -25,16 +25,16 @@
         public override int GetDamageReduction(BattleDiceBehavior behavior)
         {
             if (Type != StruggleEmotionType.Def) return base.GetBreakDamageReduction(behavior);
-            if (_owner.hp <= _owner.MaxHp * 0.50f) return 1;
-            if (_owner.hp <= _owner.MaxHp * 0.25f) return 3;
+            if (_owner.hp <= _owner.MaxHp * 0.45f) return 1;
+            if (_owner.hp <= _owner.MaxHp * 0.20f) return 3;
             return _owner.hp <= _owner.MaxHp * 0.10f ? 5 : base.GetBreakDamageReduction(behavior);
         }
 
         public override int GetBreakDamageReduction(BattleDiceBehavior behavior)
         {
             if (Type != StruggleEmotionType.Def) return base.GetBreakDamageReduction(behavior);
-            if (_owner.hp <= _owner.MaxHp * 0.50f) return 1;
-            if (_owner.hp <= _owner.MaxHp * 0.25f) return 3;
+            if (_owner.hp <= _owner.MaxHp * 0.45f) return 1;
+            if (_owner.hp <= _owner.MaxHp * 0.20f) return 3;
             return _owner.hp <= _owner.MaxHp * 0.10f ? 5 : base.GetBreakDamageReduction(behavior);
         }
     }

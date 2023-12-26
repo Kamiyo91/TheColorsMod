@@ -22,7 +22,7 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard
 
         public override void OnLoseParrying(BattleDiceBehavior behavior)
         {
-            _active = false;
+            if (behavior.Type == BehaviourType.Atk) _active = false;
         }
 
         public override void OnRoundStart()

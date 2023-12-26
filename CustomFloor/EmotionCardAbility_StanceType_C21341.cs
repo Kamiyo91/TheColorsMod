@@ -10,8 +10,8 @@ namespace TheColorsMod_C21341.CustomFloor
         public override void OnRoundStart()
         {
             Type = _owner.GetActiveBuff<BattleUnitBuf_DefStance_C21341>() != null
-                ? StruggleEmotionType.Atk
-                : StruggleEmotionType.Def;
+                ? StruggleEmotionType.Def
+                : StruggleEmotionType.Atk;
         }
 
         public void SetType(StruggleEmotionType type)

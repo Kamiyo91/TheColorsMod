@@ -110,6 +110,7 @@
     <Compile Include="CustomFloor\EmotionCard\EmotionCardAbility_EmotionClone_C21341.cs" />
     <Compile Include="CustomFloor\Passive\PassiveAbility_CloneEmotion_C21341.cs" />
     <Compile Include="CustomFloor\Passive\PassiveAbility_CustomFloor_C21341.cs" />
+    <Compile Include="CustomFloor\Passive\PassiveAbility_EmotionStance_C21341.cs" />
     <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_LastMagicCallEmotion_C21341.cs" />
     <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_SummonCloneEmotion_C21341.cs" />
     <Compile Include="EffectUtil.cs" />
