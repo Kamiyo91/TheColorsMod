@@ -6,10 +6,11 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Mio
     public class EmotionCardAbility_EmotionRush_C21341 : EmotionCardAbilityBase
     {
         private bool _active;
+
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (!_active || behavior.Detail != BehaviourDetail.Slash) return;
-            behavior.ApplyDiceStatBonus(new DiceStatBonus{power = 1});
+            behavior.ApplyDiceStatBonus(new DiceStatBonus { power = 1 });
             _owner.SetEmotionCombatLog(_emotionCard);
         }
 
