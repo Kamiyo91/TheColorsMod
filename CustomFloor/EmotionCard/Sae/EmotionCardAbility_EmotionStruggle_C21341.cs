@@ -1,4 +1,4 @@
-﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Sae
 {
     public class EmotionCardAbility_EmotionStruggle_C21341 : EmotionCardAbility_StanceType_C21341
     {

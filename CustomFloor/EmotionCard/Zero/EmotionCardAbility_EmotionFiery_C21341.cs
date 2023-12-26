@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Zero
 {
     public class EmotionCardAbility_EmotionFiery_C21341 : EmotionCardAbilityBase
     {

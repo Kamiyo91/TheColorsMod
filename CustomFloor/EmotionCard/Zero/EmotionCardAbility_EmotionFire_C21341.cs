@@ -1,7 +1,7 @@
 ﻿using TheColorsMod_C21341.Zero.Passive;
 using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Zero
 {
     public class EmotionCardAbility_EmotionFire_C21341 : EmotionCardAbilityBase
     {

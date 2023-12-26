@@ -1,7 +1,7 @@
 ﻿using TheColorsMod_C21341.CustomFloor.Buff;
 using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Reno
 {
     public class EmotionCardAbility_EmotionPrey_C21341 : EmotionCardAbilityBase
     {

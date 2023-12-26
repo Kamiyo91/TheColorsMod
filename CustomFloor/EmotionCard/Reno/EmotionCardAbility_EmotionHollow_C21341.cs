@@ -1,6 +1,7 @@
 ﻿using LOR_DiceSystem;
+using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Reno
 {
     public class EmotionCardAbility_EmotionHollow_C21341 : EmotionCardAbilityBase
     {
@@ -16,8 +17,9 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard
 
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
-            if (_active && behavior.card.card.XmlData.Spec.Ranged == CardRange.Far)
-                behavior.ApplyDiceStatBonus(new DiceStatBonus { power = 1 });
+            if (!_active || behavior.card.card.XmlData.Spec.Ranged != CardRange.Far) return;
+            behavior.ApplyDiceStatBonus(new DiceStatBonus { power = 1 });
+            _owner.SetEmotionCombatLog(_emotionCard);
         }
 
         public override void OnLoseParrying(BattleDiceBehavior behavior)

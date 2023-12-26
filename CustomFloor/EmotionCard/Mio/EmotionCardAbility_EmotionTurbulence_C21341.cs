@@ -1,4 +1,4 @@
-﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Mio
 {
     public class EmotionCardAbility_EmotionTurbulence_C21341 : EmotionCardAbilityBase
     {

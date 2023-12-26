@@ -1,16 +1,16 @@
 ﻿using LOR_DiceSystem;
+using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Mio
 {
     public class EmotionCardAbility_EmotionRush_C21341 : EmotionCardAbilityBase
     {
         private bool _active;
-
-        public override DiceStatBonus GetDiceStatBonus(BehaviourDetail behaviour)
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
-            return _active && behaviour == BehaviourDetail.Slash
-                ? new DiceStatBonus { power = 1 }
-                : base.GetDiceStatBonus(behaviour);
+            if (!_active || behavior.Detail != BehaviourDetail.Slash) return;
+            behavior.ApplyDiceStatBonus(new DiceStatBonus{power = 1});
+            _owner.SetEmotionCombatLog(_emotionCard);
         }
 
         public override void OnLoseParrying(BattleDiceBehavior behavior)

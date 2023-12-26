@@ -1,4 +1,4 @@
-﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Wonderland
 {
     public class EmotionCardAbility_EmotionClone_C21341 : EmotionCardAbilityBase
     {

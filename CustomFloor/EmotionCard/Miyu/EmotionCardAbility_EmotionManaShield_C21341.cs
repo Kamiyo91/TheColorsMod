@@ -3,7 +3,7 @@ using TheColorsMod_C21341.Miyu.Buff;
 using TheColorsMod_C21341.Miyu.Passive;
 using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Miyu
 {
     public class EmotionCardAbility_EmotionManaShield_C21341 : EmotionCardAbilityBase
     {

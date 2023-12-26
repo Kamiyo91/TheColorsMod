@@ -1,6 +1,6 @@
 ﻿using TheColorsMod_C21341.CustomFloor.Passive;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Sae
 {
     public class EmotionCardAbility_EmotionStance_C21341 : EmotionCardAbilityBase
     {

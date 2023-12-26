@@ -2,7 +2,7 @@
 using TheColorsMod_C21341.Mio.Passive;
 using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Mio
 {
     public class EmotionCardAbility_EmotionMio_C21341 : EmotionCardAbilityBase
     {

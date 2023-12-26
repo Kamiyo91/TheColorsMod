@@ -1,6 +1,6 @@
 ﻿using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Wonderland
 {
     public class EmotionCardAbility_EmotionEmergencyStocks_C21341 : EmotionCardAbilityBase
     {

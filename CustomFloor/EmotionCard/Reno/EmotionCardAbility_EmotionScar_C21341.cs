@@ -1,6 +1,6 @@
 ﻿using UtilLoader21341.Util;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Reno
 {
     public class EmotionCardAbility_EmotionScar_C21341 : EmotionCardAbilityBase
     {

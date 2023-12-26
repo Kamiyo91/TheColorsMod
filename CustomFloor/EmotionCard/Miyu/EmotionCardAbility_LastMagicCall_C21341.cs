@@ -1,4 +1,4 @@
-﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+﻿namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Miyu
 {
     public class EmotionCardAbility_LastMagicCall_C21341 : EmotionCardAbilityBase
     {

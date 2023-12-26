@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using LOR_DiceSystem;
 
-namespace TheColorsMod_C21341.CustomFloor.EmotionCard
+namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Wonderland
 {
     public class EmotionCardAbility_EmotionQuickness_C21341 : EmotionCardAbilityBase
     {
