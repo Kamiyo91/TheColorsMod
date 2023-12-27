@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using CustomMapUtility;
+using UtilLoader21341;
 using UtilLoader21341.Models;
 using UtilLoader21341.Util;
 
@@ -8,19 +9,20 @@ namespace TheColorsMod_C21341.CustomFloor
     public class DiceCardSelfAbility_EgoOneScene_C21341 : DiceCardSelfAbilityBase
     {
         public bool MapActivated;
-        public virtual MapModelRoot MapModel => null;
+        public virtual string MapModelComponent => "";
         public virtual string SkinName => "";
         public string PackageId => TheColorsModParameters.PackageId;
 
         public override void OnUseCard()
         {
+            var mapModel = ModParameters.MapModels.FirstOrDefault(x => x.Component == MapModelComponent);
             if (!string.IsNullOrEmpty(SkinName))
             {
                 owner.view.StartEgoSkinChangeEffect("Character");
                 owner.view.SetAltSkin(SkinName);
             }
 
-            ChangeToEgoMap();
+            ChangeToEgoMap(mapModel);
         }
 
         public override void OnEndAreaAttack()
@@ -30,23 +32,25 @@ namespace TheColorsMod_C21341.CustomFloor
             owner.view.CreateSkin();
         }
 
-        public void ChangeToEgoMap()
+        public void ChangeToEgoMap(MapModelRoot mapModel)
         {
-            if (MapModel == null || SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
-            if (MapUtil.ChangeMap(CustomMapHandler.GetCMU(PackageId), MapModel)) MapActivated = true;
+            if (mapModel == null || SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
+            if (MapUtil.ChangeMap(CustomMapHandler.GetCMU(PackageId), mapModel)) MapActivated = true;
         }
 
-        public virtual void ReturnFromEgoMap()
+        public void ReturnFromEgoMap(MapModelRoot mapModel)
         {
             MapActivated = false;
-            if (MapModel == null) return;
-            MapUtil.ReturnFromEgoMap(CustomMapHandler.GetCMU(PackageId), MapModel.Stage,
-                MapModel.OriginalMapStageIds.Select(x => x.ToLorId()).ToList());
+            if (mapModel == null) return;
+            MapUtil.ReturnFromEgoMap(CustomMapHandler.GetCMU(PackageId), mapModel.Stage,
+                mapModel.OriginalMapStageIds.Select(x => x.ToLorId()).ToList());
         }
 
         public override void OnRoundEnd(BattleUnitModel unit, BattleDiceCardModel self)
         {
-            if (MapActivated) ReturnFromEgoMap();
+            if (!MapActivated) return;
+            var mapModel = ModParameters.MapModels.FirstOrDefault(x => x.Component == MapModelComponent);
+            ReturnFromEgoMap(mapModel);
         }
     }
 }
