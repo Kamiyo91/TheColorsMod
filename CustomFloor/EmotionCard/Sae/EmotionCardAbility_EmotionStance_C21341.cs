@@ -1,4 +1,5 @@
-﻿using TheColorsMod_C21341.CustomFloor.Passive;
+﻿using System.Collections.Generic;
+using UtilLoader21341.Extensions;
 
 namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Sae
 {
@@ -6,18 +7,21 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Sae
     {
         public override void OnSelectEmotion()
         {
-            var passive = new PassiveAbility_EmotionStance_C21341();
+            var passive = new PassiveAbility_SwitchBuffsOddAndEven_DLL21341();
             _owner.passiveDetail.PassiveList.Add(passive);
             passive.Init(_owner);
-            passive.OnWaveStart();
+            passive.SetKeywords(new List<KeywordBuf> { KeywordBuf.Strength, KeywordBuf.Endurance });
+            passive.SetAddOneExtra(true);
+            passive.SetActive(true);
         }
 
         public override void OnWaveStart()
         {
-            var passive = new PassiveAbility_EmotionStance_C21341();
+            var passive = new PassiveAbility_SwitchBuffs_DLL21341();
             _owner.passiveDetail.PassiveList.Add(passive);
             passive.Init(_owner);
-            passive.OnWaveStart();
+            passive.SetAddOneExtra(true);
+            passive.SetActive(true);
         }
     }
 }

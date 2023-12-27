@@ -38,8 +38,9 @@
     <Reference Include="1EmotionCardUtil">
       <HintPath>..\CommonDLL\1EmotionCardUtil.dll</HintPath>
     </Reference>
-    <Reference Include="1UtilLoader21341">
-      <HintPath>..\CommonDLL\1UtilLoader21341.dll</HintPath>
+    <Reference Include="1UtilLoader21341, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LoaderDLL\bin\Release\1UtilLoader21341.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\CommonDLL\Assembly-CSharp.dll</HintPath>
@@ -110,7 +111,6 @@
     <Compile Include="CustomFloor\EmotionCard\Wonderland\EmotionCardAbility_EmotionClone_C21341.cs" />
     <Compile Include="CustomFloor\Passive\PassiveAbility_CloneEmotion_C21341.cs" />
     <Compile Include="CustomFloor\Passive\PassiveAbility_CustomFloor_C21341.cs" />
-    <Compile Include="CustomFloor\Passive\PassiveAbility_EmotionStance_C21341.cs" />
     <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_LastMagicCallEmotion_C21341.cs" />
     <Compile Include="CustomFloor\SpecialCard\DiceCardSelfAbility_SummonCloneEmotion_C21341.cs" />
     <Compile Include="EffectUtil.cs" />
