@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Sound;
 using TheColorsMod_C21341.CustomFloor;
 using TheColorsMod_C21341.Sae.Buff;
+using UtilLoader21341.Extensions;
 using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Sae
@@ -77,6 +79,17 @@ namespace TheColorsMod_C21341.Sae
             if (emotionCard == null) return;
             foreach (var ability in emotionCard.AbilityList.OfType<EmotionCardAbility_StanceType_C21341>())
                 ability.SetType(type);
+        }
+
+        public static void AddSwitchBuffEmotionPassive(BattleUnitModel owner)
+        {
+            var passive = owner.GetActivePassive<PassiveAbility_SwitchBuffsOddAndEven_DLL21341>() ??
+                          new PassiveAbility_SwitchBuffsOddAndEven_DLL21341();
+            owner.passiveDetail.PassiveList.Add(passive);
+            passive.Init(owner);
+            passive.SetKeywords(new List<KeywordBuf> { KeywordBuf.Strength, KeywordBuf.Endurance });
+            passive.SetAddOneExtra(true);
+            passive.SetActive(true);
         }
     }
 }
