@@ -442,12 +442,12 @@ namespace TheColorsMod_C21341
                 new PassiveOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId, PassiveId = 14, IsSupportPassive = true,
-                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true
+                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true, GainCoins = false
                 },
                 new PassiveOptionRoot
                 {
                     PackageId = TheColorsModParameters.PackageId, PassiveId = 38, IsSupportPassive = true,
-                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true
+                    BannedEgoFloorCards = true, BannedEmotionCardSelection = true, GainCoins = false
                 },
                 new PassiveOptionRoot
                 {
