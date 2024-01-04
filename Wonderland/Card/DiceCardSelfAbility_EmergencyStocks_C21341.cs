@@ -13,7 +13,7 @@ namespace TheColorsMod_C21341.Wonderland.Card
 
         private static void Activate(BattleUnitModel unit)
         {
-            unit.AddBuffCustom<BattleUnitBuf_SmokeBomb_C21341>(10);
+            unit.AddBuffCustom<BattleUnitBuf_SmokeBomb_C21341>(10, maxStack: 10);
             unit.cardSlotDetail.RecoverPlayPoint(unit.MaxPlayPoint);
             unit.allyCardDetail.DrawCards(2);
             unit.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Smoke, 10, unit);

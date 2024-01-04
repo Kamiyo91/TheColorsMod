@@ -10,7 +10,7 @@ namespace TheColorsMod_C21341.Miyu.Passive
             owner.cardSlotDetail.RecoverPlayPoint(1);
             if (owner.allyCardDetail.IsHighlander() &&
                 owner.GetActivePassive<PassiveAbility_ThePinkIdol_C21341>() != null)
-                owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(5);
+                owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(5, maxStack: 100);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace TheColorsMod_C21341.Reno.Buff
 
         public override void OnRoundEndTheLast()
         {
-            this.AddBufCustom(-3);
+            this.AddBufCustom(-3, maxStack: 999);
         }
     }
 }

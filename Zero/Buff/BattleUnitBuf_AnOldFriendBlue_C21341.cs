@@ -22,7 +22,7 @@ namespace TheColorsMod_C21341.Zero.Buff
         {
             if (stack < 5)
             {
-                this.AddBufCustom(1);
+                this.AddBufCustom(1, maxStack: 5);
                 return;
             }
 

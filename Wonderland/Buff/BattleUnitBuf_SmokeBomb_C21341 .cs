@@ -11,7 +11,7 @@ namespace TheColorsMod_C21341.Wonderland.Buff
 
         public override void OnRoundStartAfter()
         {
-            this.AddBufCustom(1);
+            this.AddBufCustom(1, maxStack: 10);
             HitCount = 0;
         }
 
@@ -26,7 +26,7 @@ namespace TheColorsMod_C21341.Wonderland.Buff
 
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
-            if (behavior.Detail == BehaviourDetail.Evasion) this.AddBufCustom(1);
+            if (behavior.Detail == BehaviourDetail.Evasion) this.AddBufCustom(1, maxStack: 10);
         }
 
         public override int GetCardCostAdder(BattleDiceCardModel card)

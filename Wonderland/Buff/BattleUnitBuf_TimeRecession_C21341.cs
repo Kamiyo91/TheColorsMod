@@ -14,7 +14,7 @@ namespace TheColorsMod_C21341.Wonderland.Buff
             if (stack < 5 || curCard.card.CreateDiceCardBehaviorList().All(x => x.Type == BehaviourType.Standby) ||
                 !curCard.card.IsNotMassAttackOrSpecialAttack(99))
             {
-                this.AddBufCustom(1);
+                this.AddBufCustom(1, maxStack: 5);
                 return;
             }
 

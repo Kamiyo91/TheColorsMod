@@ -19,13 +19,13 @@ namespace TheColorsMod_C21341.Miyu.Passive
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 69));
             //owner.personalEgoDetail.AddCard(_sacraficeCard);
             owner.personalEgoDetail.AddCard(_specialCard);
-            owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(10);
+            owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(10, maxStack: 100);
         }
 
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             if (curCard.GetDiceBehaviorList().Any(x => x.Type != BehaviourType.Standby))
-                owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(10);
+                owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(10, maxStack: 100);
             //var cardId = curCard.card.GetID();
             //if (cardId.packageId == TheColorsModParameters.PackageId && cardId.id == _sacraficeCard.id)
             //    owner.personalEgoDetail.RemoveCard(_sacraficeCard);

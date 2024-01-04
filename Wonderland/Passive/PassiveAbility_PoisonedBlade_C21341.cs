@@ -27,7 +27,7 @@ namespace TheColorsMod_C21341.Wonderland.Passive
             if (_random.Next(0, 100) <= 30 * Multiplier)
                 target.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Binding, 1, owner);
             if (_random.Next(0, 100) > 20 * Multiplier) return;
-            owner.AddBuffCustom<BattleUnitBuf_PurplePoison_C21341>(1);
+            owner.AddBuffCustom<BattleUnitBuf_PurplePoison_C21341>(1, maxStack: 99);
         }
     }
 }

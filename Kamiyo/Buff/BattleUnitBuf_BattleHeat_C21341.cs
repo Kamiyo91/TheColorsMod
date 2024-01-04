@@ -9,7 +9,7 @@ namespace TheColorsMod_C21341.Kamiyo.Buff
 
         public override void OnEndParrying()
         {
-            this.AddBufCustom(1);
+            this.AddBufCustom(1, maxStack: 5);
         }
 
         public override void BeforeRollDice(BattleDiceBehavior behavior)

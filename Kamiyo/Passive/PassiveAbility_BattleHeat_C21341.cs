@@ -36,7 +36,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
                 .FirstOrDefault(x => x.Key.Equals("BattleHeatPassive_C21341")).Value.Name;
             desc = ModParameters.LocalizedItems[TheColorsModParameters.PackageId].EffectTexts
                 .FirstOrDefault(x => x.Key.Equals("BattleHeatPassive_C21341")).Value.Desc;
-            owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(1);
+            owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(1, maxStack: 5);
         }
     }
 }
