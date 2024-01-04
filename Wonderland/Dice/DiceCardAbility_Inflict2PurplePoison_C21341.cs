@@ -7,7 +7,7 @@ namespace TheColorsMod_C21341.Wonderland.Dice
     {
         public override void OnSucceedAttack(BattleUnitModel target)
         {
-            target?.OnAddBuff<BattleUnitBuf_PurplePoison_C21341>(2);
+            target?.AddBuffCustom<BattleUnitBuf_PurplePoison_C21341>(2);
         }
     }
 }

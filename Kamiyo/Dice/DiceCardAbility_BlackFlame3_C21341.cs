@@ -9,7 +9,7 @@ namespace TheColorsMod_C21341.Kamiyo.Dice
 
         public override void OnSucceedAttack(BattleUnitModel target)
         {
-            target?.OnAddBuff<BattleUnitBuf_BlackFlame_C21341>(3);
+            target?.AddBuffCustom<BattleUnitBuf_BlackFlame_C21341>(3);
         }
     }
 }

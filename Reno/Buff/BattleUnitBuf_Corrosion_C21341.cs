@@ -18,14 +18,9 @@ namespace TheColorsMod_C21341.Reno.Buff
             return stack;
         }
 
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 50);
-        }
-
         public override void OnRoundEndTheLast()
         {
-            OnAddBuf(-3);
+            this.AddBufCustom(-3);
         }
     }
 }

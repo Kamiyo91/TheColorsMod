@@ -20,7 +20,7 @@ namespace TheColorsMod_C21341.CustomFloor.EgoCard
                 power = 4
             });
             var buff = owner.bufListDetail.GetActivatedBufList().FirstOrDefault(x => x.bufType == KeywordBuf.Burn);
-            buff.OnAddBufCustom(-20, owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null);
+            buff.AddBufCustom(-20, owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null);
         }
     }
 }

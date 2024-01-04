@@ -9,18 +9,18 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Miyu
     {
         public override void OnSelectEmotion()
         {
-            _owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(100);
+            _owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(100);
             if (_owner.GetActivePassive<PassiveAbility_ThePinkIdol_C21341>() != null)
-                _owner.OnAddBuff<BattleUnitBuf_ManaShield_C21341>(0);
-            else _owner.OnAddBuff<BattleUnitBuf_ManaShieldEmotion_C21341>(0);
+                _owner.AddBuffCustom<BattleUnitBuf_ManaShield_C21341>(0);
+            else _owner.AddBuffCustom<BattleUnitBuf_ManaShieldEmotion_C21341>(0);
         }
 
         public override void OnWaveStart()
         {
-            _owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(100);
+            _owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(100);
             if (_owner.GetActivePassive<PassiveAbility_ThePinkIdol_C21341>() != null)
-                _owner.OnAddBuff<BattleUnitBuf_ManaShield_C21341>(0);
-            else _owner.OnAddBuff<BattleUnitBuf_ManaShieldEmotion_C21341>(0);
+                _owner.AddBuffCustom<BattleUnitBuf_ManaShield_C21341>(0);
+            else _owner.AddBuffCustom<BattleUnitBuf_ManaShieldEmotion_C21341>(0);
         }
     }
 }

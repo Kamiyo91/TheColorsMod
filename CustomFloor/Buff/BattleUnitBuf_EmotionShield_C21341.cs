@@ -1,6 +1,5 @@
 ﻿using LOR_DiceSystem;
 using Sound;
-using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.CustomFloor.Buff
 {
@@ -23,11 +22,6 @@ namespace TheColorsMod_C21341.CustomFloor.Buff
             base.Init(owner);
             ResistHpValue = AtkResist.Endure;
             ResistBpValue = AtkResist.Endure;
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(0, maxStack: 0);
         }
 
         public override AtkResist GetResistBP(AtkResist origin, BehaviourDetail detail)

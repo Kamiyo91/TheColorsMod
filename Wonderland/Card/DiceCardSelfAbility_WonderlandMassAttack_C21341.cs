@@ -19,7 +19,7 @@ namespace TheColorsMod_C21341.Wonderland.Card
             if (buff?.stack > 9)
                 card.ApplyDiceAbility(DiceMatch.AllDice, new DiceCardAbility_Inflict2PurplePoison_C21341());
             else card.ApplyDiceAbility(DiceMatch.AllDice, new DiceCardAbility_Inflict1PurplePoison_C21341());
-            buff?.OnAddBuf(-10);
+            buff?.AddBufCustom(-10);
         }
 
         public override void OnEndAreaAttack()

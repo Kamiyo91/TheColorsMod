@@ -22,7 +22,7 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Mio
             if (_owner.GetActivePassive<PassiveAbility_MysticEyesOfHeaven_C21341>() != null)
             {
                 var buff =
-                    _owner.OnAddBuff<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0) as
+                    _owner.AddBuffCustom<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0) as
                         BattleUnitBuf_MysticEyesOfHeaven_C21341;
                 buff?.SetResistType(AtkResist.Vulnerable);
                 return;

@@ -12,7 +12,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
 
         public override void OnRoundStart()
         {
-            if (Activated) owner.OnAddBuff<BattleUnitBuf_BattleHeat_C21341>(0);
+            if (Activated) owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(0);
         }
 
         public override void OnWaveStart()
@@ -36,7 +36,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
                 .FirstOrDefault(x => x.Key.Equals("BattleHeatPassive_C21341")).Value.Name;
             desc = ModParameters.LocalizedItems[TheColorsModParameters.PackageId].EffectTexts
                 .FirstOrDefault(x => x.Key.Equals("BattleHeatPassive_C21341")).Value.Desc;
-            owner.OnAddBuff<BattleUnitBuf_BattleHeat_C21341>(1);
+            owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(1);
         }
     }
 }

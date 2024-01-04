@@ -9,24 +9,19 @@ namespace TheColorsMod_C21341.Wonderland.Buff
         protected override string keywordId => "TimeRecession_C21341";
         protected override string keywordIconId => "TimeRecession_C21341";
 
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 5);
-        }
-
         public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
         {
             if (stack < 5 || curCard.card.CreateDiceCardBehaviorList().All(x => x.Type == BehaviourType.Standby) ||
                 !curCard.card.IsNotMassAttackOrSpecialAttack(99))
             {
-                OnAddBuf(1);
+                this.AddBufCustom(1);
                 return;
             }
 
             var aliveList = BattleObjectManager.instance.GetAliveList(_owner.faction.ReturnOtherSideFaction());
             if (!aliveList.Any()) return;
             _owner.RecoverHP(5);
-            OnAddBuf(-99);
+            this.AddBufCustom(-99);
             var target = RandomUtil.SelectOne(aliveList);
             Singleton<StageController>.Instance.AddAllCardListInBattle(curCard, target);
         }

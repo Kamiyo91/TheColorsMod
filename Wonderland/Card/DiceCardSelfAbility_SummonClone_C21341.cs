@@ -23,7 +23,7 @@ namespace TheColorsMod_C21341.Wonderland.Card
         public static void Activate(BattleUnitModel unit)
         {
             var buff = unit.GetActiveBuff<BattleUnitBuf_SmokeBomb_C21341>();
-            buff?.OnAddBuf(-5);
+            buff?.AddBufCustom(-5);
             SummonSpecialUnit(unit.emotionDetail.EmotionLevel, unit.faction);
             UnitUtil.RefreshCombatUI();
         }

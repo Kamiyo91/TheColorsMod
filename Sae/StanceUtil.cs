@@ -28,29 +28,22 @@ namespace TheColorsMod_C21341.Sae
             owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 9));
         }
 
-        public static void ChangeStance<T>(this BattleUnitModel owner, string stanceType, int deckIndex)
+        public static void ChangeStance<T>(this BattleUnitModel owner, int deckIndex,
+            ActionDetail altMotion = ActionDetail.NONE, bool resetStance = false)
             where T : BattleUnitBuf, new()
         {
             ChangeAnimation(owner);
-            owner.OnAddBuff<T>(0);
-            if (stanceType.Equals("Def"))
-            {
-                owner.view.charAppearance.SetAltMotion(ActionDetail.Standing, ActionDetail.Guard);
-                owner.view.charAppearance.SetAltMotion(ActionDetail.Default, ActionDetail.Guard);
-            }
-            else
+            owner.AddBuffCustom<T>(0);
+            if (resetStance)
             {
                 owner.view.charAppearance.RemoveAltMotion(ActionDetail.Standing);
                 owner.view.charAppearance.RemoveAltMotion(ActionDetail.Default);
             }
-
-            //if (addBuf != KeywordBuf.None && removeBuf != KeywordBuf.None &&
-            //    owner.bufListDetail.GetActivatedBufList().Exists(x => x.bufType == removeBuf) &&
-            //    UnitUtil.SupportCharCheck(owner) == 1)
-            //{
-            //    DecreaseStacksBufType(owner, removeBuf, 3);
-            //    owner.bufListDetail.AddKeywordBufThisRoundByEtc(addBuf, 3, owner);
-            //}
+            else
+            {
+                owner.view.charAppearance.SetAltMotion(ActionDetail.Standing, altMotion);
+                owner.view.charAppearance.SetAltMotion(ActionDetail.Default, altMotion);
+            }
 
             if (owner.faction != Faction.Player) return;
             owner.view.speedDiceSetterUI.DeselectAll();

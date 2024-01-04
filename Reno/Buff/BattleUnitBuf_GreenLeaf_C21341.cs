@@ -1,6 +1,5 @@
 ﻿using Sound;
 using UnityEngine;
-using UtilLoader21341.Util;
 
 namespace TheColorsMod_C21341.Reno.Buff
 {
@@ -22,11 +21,6 @@ namespace TheColorsMod_C21341.Reno.Buff
         {
             base.Init(owner);
             CreateAura();
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 0);
         }
 
         public override int GetCardCostAdder(BattleDiceCardModel card)

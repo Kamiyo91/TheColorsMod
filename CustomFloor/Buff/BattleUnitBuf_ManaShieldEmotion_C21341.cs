@@ -32,7 +32,7 @@ namespace TheColorsMod_C21341.CustomFloor.Buff
                     _owner.view, _owner.view);
                 SoundEffectPlayer.PlaySound("Creature/Greed_MakeDiamond");
             });
-            manaBuff?.OnAddBuf(-dmg * 2);
+            manaBuff?.AddBufCustom(-dmg * 2);
         }
 
         public override void OnRoundStartAfter()

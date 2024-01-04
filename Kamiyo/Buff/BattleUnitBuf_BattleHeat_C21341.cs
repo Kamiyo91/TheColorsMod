@@ -9,19 +9,14 @@ namespace TheColorsMod_C21341.Kamiyo.Buff
 
         public override void OnEndParrying()
         {
-            OnAddBuf(1);
+            this.AddBufCustom(1);
         }
 
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (stack < 5 || !behavior.card.card.IsNotMassAttackOrSpecialAttack(99)) return;
-            OnAddBuf(-99);
+            this.AddBufCustom(-99);
             behavior.ApplyDiceStatBonus(new DiceStatBonus { min = behavior.GetDiceMax() - behavior.GetDiceMin() });
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 5);
         }
     }
 }

@@ -65,7 +65,8 @@ namespace TheColorsMod_C21341.Zero.Passive
                     unit.bufListDetail.RemoveReadyBuf(burnNextBuff);
                 }
 
-                if (blueBuffStacks > 0) unit.AddBuff<BattleUnitBuf_BlueBurn_C21341>(blueBuffStacks, maxStack: 999);
+                if (blueBuffStacks > 0)
+                    unit.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(blueBuffStacks, maxStack: 999);
                 AddHiddenPassive(unit);
             }
         }
@@ -82,7 +83,7 @@ namespace TheColorsMod_C21341.Zero.Passive
         public void HandleBlueBurn()
         {
             if (owner.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>() == null)
-                owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(0);
+                owner.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(0);
         }
 
         public override void OnRoundEndTheLast()
@@ -148,7 +149,7 @@ namespace TheColorsMod_C21341.Zero.Passive
         public override bool CanAddBuf(BattleUnitBuf buf)
         {
             if (buf.bufType != KeywordBuf.Burn || buf is BattleUnitBuf_BlueBurn_C21341) return true;
-            owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(buf.stack, maxStack: 999);
+            owner.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(buf.stack, maxStack: 999);
             return false;
         }
     }

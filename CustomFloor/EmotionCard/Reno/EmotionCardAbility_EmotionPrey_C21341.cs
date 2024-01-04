@@ -7,10 +7,10 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Reno
     {
         public override void OnRoundStart()
         {
-            _owner.OnAddBuff<BattleUnitBuf_EmotionPreyOwner_C21341>(0);
+            _owner.AddBuffCustom<BattleUnitBuf_EmotionPreyOwner_C21341>(0);
             var enemyUnits = BattleObjectManager.instance.GetAliveList(_owner.faction.ReturnOtherSideFaction());
             var unit = RandomUtil.SelectOne(enemyUnits);
-            unit.OnAddBuff<BattleUnitBuf_EmotionPrey_C21341>(0);
+            unit.AddBuffCustom<BattleUnitBuf_EmotionPrey_C21341>(0);
         }
 
         public override void OnSucceedAttack(BattleDiceBehavior behavior)

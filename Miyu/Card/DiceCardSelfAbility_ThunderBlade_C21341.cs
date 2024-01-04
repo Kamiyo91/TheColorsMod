@@ -14,7 +14,7 @@ namespace TheColorsMod_C21341.Miyu.Card
 
         public override void OnStartBattle()
         {
-            owner.OnAddBuff<BattleUnitBuf_Mana_C21341>(-100);
+            owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(-100);
             if (owner.GetActiveBuff<BattleUnitBuf_Mana_C21341>()?.stack < 1)
                 owner.GetActiveBuff<BattleUnitBuf_ManaShield_C21341>()?.RemoveBuff();
         }

@@ -9,14 +9,9 @@ namespace TheColorsMod_C21341.Wonderland.Buff
         protected override string keywordId => "SmokeBomb_C21341";
         protected override string keywordIconId => "SmokeBomb_C21341";
 
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 10);
-        }
-
         public override void OnRoundStartAfter()
         {
-            OnAddBuf(1);
+            this.AddBufCustom(1);
             HitCount = 0;
         }
 
@@ -26,12 +21,12 @@ namespace TheColorsMod_C21341.Wonderland.Buff
             HitCount++;
             if (HitCount < 3) return;
             HitCount = 0;
-            OnAddBuf(-1);
+            this.AddBufCustom(-1);
         }
 
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
-            if (behavior.Detail == BehaviourDetail.Evasion) OnAddBuf(1);
+            if (behavior.Detail == BehaviourDetail.Evasion) this.AddBufCustom(1);
         }
 
         public override int GetCardCostAdder(BattleDiceCardModel card)

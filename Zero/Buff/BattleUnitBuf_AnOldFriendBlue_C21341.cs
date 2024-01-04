@@ -18,16 +18,11 @@ namespace TheColorsMod_C21341.Zero.Buff
             if (Passive == null) owner.bufListDetail.RemoveBuf(this);
         }
 
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 5);
-        }
-
         public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
         {
             if (stack < 5)
             {
-                OnAddBuf(1);
+                this.AddBufCustom(1);
                 return;
             }
 
@@ -37,7 +32,7 @@ namespace TheColorsMod_C21341.Zero.Buff
                 x.XmlData.Spec.Ranged != CardRange.FarArea && x.XmlData.Spec.Ranged != CardRange.FarAreaEach &&
                 x.XmlData.Spec.Ranged != CardRange.Special).ToList();
             if (!cards.Any()) return;
-            OnAddBuf(-99);
+            this.AddBufCustom(-99);
             var cardInfo = RandomUtil.SelectOne(cards);
             var card = new BattlePlayingCardDataInUnitModel
             {

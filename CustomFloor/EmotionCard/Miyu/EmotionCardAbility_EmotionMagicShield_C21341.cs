@@ -7,17 +7,17 @@ namespace TheColorsMod_C21341.CustomFloor.EmotionCard.Miyu
     {
         public override void OnSelectEmotion()
         {
-            _owner.OnAddBuff<BattleUnitBuf_EmotionShield_C21341>(0);
+            _owner.AddBuffCustom<BattleUnitBuf_EmotionShield_C21341>(0);
         }
 
         public override void OnWaveStart()
         {
-            _owner.OnAddBuff<BattleUnitBuf_EmotionShield_C21341>(0);
+            _owner.AddBuffCustom<BattleUnitBuf_EmotionShield_C21341>(0);
         }
 
         public override void OnRoundStart()
         {
-            _owner.OnAddBuff<BattleUnitBuf_EmotionShield_C21341>(0);
+            _owner.AddBuffCustom<BattleUnitBuf_EmotionShield_C21341>(0);
         }
     }
 }

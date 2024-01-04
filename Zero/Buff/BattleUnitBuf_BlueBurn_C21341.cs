@@ -38,7 +38,7 @@ namespace TheColorsMod_C21341.Zero.Buff
 
         public void AddBuffCustom(int addedStack)
         {
-            this.OnAddBufCustom(addedStack, _owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null, 0, 999);
+            this.AddBufCustom(addedStack, _owner.GetActivePassive<PassiveAbility_Zero_C21341>() == null, 0, 999);
         }
 
         private void PrintEffect()

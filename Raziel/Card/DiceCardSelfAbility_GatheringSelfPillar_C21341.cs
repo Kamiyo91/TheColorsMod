@@ -14,10 +14,10 @@ namespace TheColorsMod_C21341.Raziel.Card
 
         private static void Activate(BattleUnitModel unit)
         {
-            unit.OnAddBuff<BattleUnitBuf_DirectImmortal_C21341>(0);
+            unit.AddBuffCustom<BattleUnitBuf_DirectImmortal_C21341>(0);
             foreach (var buff in BattleObjectManager.instance.GetAliveList(unit.faction.ReturnOtherSideFaction())
                          .Select(enemy =>
-                             enemy.OnAddBuff<BattleUnitBuf_RedirectOnSelf_C21341>(0) as
+                             enemy.AddBuffCustom<BattleUnitBuf_RedirectOnSelf_C21341>(0) as
                                  BattleUnitBuf_RedirectOnSelf_C21341))
                 buff?.SetTarget(unit);
             foreach (var allyUnit in BattleObjectManager.instance.GetAliveList(unit.faction)

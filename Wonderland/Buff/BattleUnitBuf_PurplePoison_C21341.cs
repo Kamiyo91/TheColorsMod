@@ -11,12 +11,7 @@ namespace TheColorsMod_C21341.Wonderland.Buff
         public override void OnRoundStartAfter()
         {
             _owner.TakeDamage(stack * _owner.MaxHp / 100);
-            OnAddBuf(-99);
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, true);
+            this.AddBufCustom(-99);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace TheColorsMod_C21341.Wonderland.Passive
 
         public override void OnWaveStart()
         {
-            owner.OnAddBuff<BattleUnitBuf_Clone_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_Clone_C21341>(0);
         }
 
         public override int SpeedDiceNumAdder()

@@ -42,12 +42,12 @@ namespace TheColorsMod_C21341.Sae.Passive
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
-            _buff = self.OnAddBuff<BattleUnitBuf_RedRage_C21341>(1) as BattleUnitBuf_RedRage_C21341;
+            _buff = self.AddBuffCustom<BattleUnitBuf_RedRage_C21341>(1) as BattleUnitBuf_RedRage_C21341;
         }
 
         public override void OnRoundStart()
         {
-            _buff = owner.OnAddBuff<BattleUnitBuf_RedRage_C21341>(0) as BattleUnitBuf_RedRage_C21341;
+            _buff = owner.AddBuffCustom<BattleUnitBuf_RedRage_C21341>(0) as BattleUnitBuf_RedRage_C21341;
         }
 
         public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
@@ -61,7 +61,7 @@ namespace TheColorsMod_C21341.Sae.Passive
         {
             if (!_activeRedRage || _redRage) return;
             _buff.Changed = true;
-            _buff.OnAddBuf(-99);
+            _buff.AddBufCustom(-99);
             _redRage = true;
             owner.EgoActive(ref EgoActive, CustomSkin ? "" : EgoSkinName, true, dialog: _egoDialog, color: Color.red);
             SoundEffectPlayer.PlaySound("Creature/Angry_Meet");

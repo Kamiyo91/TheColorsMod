@@ -40,19 +40,14 @@ namespace TheColorsMod_C21341.Sae.Buff
         {
             if (Changed) return;
             if (attacker == null || dmg <= 0) return;
-            OnAddBuf(1);
+            this.AddBufCustom(1);
         }
 
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (stack < 5 || Changed) return;
-            OnAddBuf(-99);
+            this.AddBufCustom(-99);
             behavior.ApplyDiceStatBonus(new DiceStatBonus { power = 5 });
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 5);
         }
 
         public override int GetCardCostAdder(BattleDiceCardModel card)

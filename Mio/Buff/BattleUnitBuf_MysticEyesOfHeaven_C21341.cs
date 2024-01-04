@@ -21,8 +21,8 @@ namespace TheColorsMod_C21341.Mio.Buff
             SetDebuff(behavior.card.target, behavior.Detail, _resistType);
             if (stack <= 9 && (stack <= 4 || _random.Next(0, 100) > stack * 10)) return;
             _activated = true;
-            OnAddBuf(-99);
-            OnAddBuf(1);
+            this.AddBufCustom(-99);
+            this.AddBufCustom(1);
             SetDebuff(behavior.card.target, behavior.Detail, AtkResist.Weak);
         }
 
@@ -34,7 +34,7 @@ namespace TheColorsMod_C21341.Mio.Buff
         public override void BeforeGiveDamage(BattleDiceBehavior behavior)
         {
             if (behavior?.card == null || !behavior.card.CheckTargetSpeedByCard(1) || _activated) return;
-            OnAddBuf(1);
+            this.AddBufCustom(1);
         }
 
         public override void OnRoundEndTheLast()
@@ -48,14 +48,9 @@ namespace TheColorsMod_C21341.Mio.Buff
             var oldBuff = target.GetActiveBuff<BattleUnitBuf_ResistChangeOneHitOnly_DLL21341>();
             if (oldBuff != null) target.bufListDetail.RemoveBuf(oldBuff);
             var buff =
-                target.OnAddBuff<BattleUnitBuf_ResistChangeOneHitOnly_DLL21341>(0) as
+                target.AddBuffCustom<BattleUnitBuf_ResistChangeOneHitOnly_DLL21341>(0) as
                     BattleUnitBuf_ResistChangeOneHitOnly_DLL21341;
             buff?.SetResists(atkType, detail);
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 10);
         }
     }
 }

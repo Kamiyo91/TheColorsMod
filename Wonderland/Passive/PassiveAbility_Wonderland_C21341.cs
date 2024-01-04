@@ -14,12 +14,12 @@ namespace TheColorsMod_C21341.Wonderland.Passive
             if (owner.faction == Faction.Enemy)
                 owner.allyCardDetail.AddNewCardToDeck(new LorId(TheColorsModParameters.PackageId, 904));
             else owner.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 36));
-            owner.OnAddBuff<BattleUnitBuf_SmokeBomb_C21341>(1);
+            owner.AddBuffCustom<BattleUnitBuf_SmokeBomb_C21341>(1);
         }
 
         public override void OnRoundStart()
         {
-            owner.OnAddBuff<BattleUnitBuf_SmokeBomb_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_SmokeBomb_C21341>(0);
             HandleSpecialCards();
             if (owner.faction == Faction.Player) return;
             _npcCount++;
@@ -33,8 +33,8 @@ namespace TheColorsMod_C21341.Wonderland.Passive
             if (owner.faction == Faction.Player) return;
             var buff = owner.GetActiveBuff<BattleUnitBuf_SmokeBomb_C21341>();
             if (buff == null || buff.stack < 10) return;
-            buff.OnAddBuf(-99);
-            owner.OnAddBuff<BattleUnitBuf_SmokeScreen_C21341>(0);
+            buff.AddBufCustom(-99);
+            owner.AddBuffCustom<BattleUnitBuf_SmokeScreen_C21341>(0);
         }
 
         public void HandleSpecialCards()

@@ -26,7 +26,7 @@ namespace TheColorsMod_C21341.Miyu.Card
             unit.personalEgoDetail.AddCard(new LorId(TheColorsModParameters.PackageId, 84));
             var buff = unit.GetActiveBuff<BattleUnitBuf_ManaShield_C21341>();
             if (buff != null) buff.RemoveBuff();
-            else unit.OnAddBuff<BattleUnitBuf_ManaShield_C21341>(0);
+            else unit.AddBuffCustom<BattleUnitBuf_ManaShield_C21341>(0);
         }
 
         public override bool IsTargetableSelf()

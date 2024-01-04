@@ -21,7 +21,7 @@ namespace TheColorsMod_C21341.Zero.Buff
         {
             base.Init(owner);
             InitAuraAndPlaySound();
-            _buff = owner.AddBuff<BattleUnitBuf_BlueBurn_C21341>(0) as BattleUnitBuf_BlueBurn_C21341;
+            _buff = owner.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(0) as BattleUnitBuf_BlueBurn_C21341;
         }
 
         public override void OnRoundStart()
@@ -39,7 +39,7 @@ namespace TheColorsMod_C21341.Zero.Buff
 
         public override void OnRoundStartAfter()
         {
-            _buff?.OnAddBuf(2);
+            _buff?.AddBufCustom(2);
         }
 
         private void InitAuraAndPlaySound()

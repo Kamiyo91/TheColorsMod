@@ -13,7 +13,7 @@ namespace TheColorsMod_C21341.Kamiyo.Dice
         {
             if (!(card.cardAbility is DiceCardSelfAbility_ShadowMassAttack_C21341 ability) || !ability.Active ||
                 behavior.Type == BehaviourType.Standby) return;
-            card.target?.OnAddBuff<BattleUnitBuf_BlackFlame_C21341>(2);
+            card.target?.AddBuffCustom<BattleUnitBuf_BlackFlame_C21341>(2);
         }
     }
 }

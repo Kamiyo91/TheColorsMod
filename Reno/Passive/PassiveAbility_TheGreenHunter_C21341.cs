@@ -56,7 +56,7 @@ namespace TheColorsMod_C21341.Reno.Passive
 
         public override void OnRoundStart()
         {
-            if (EgoActive) owner.OnAddBuff<BattleUnitBuf_GreenLeaf_C21341>(0);
+            if (EgoActive) owner.AddBuffCustom<BattleUnitBuf_GreenLeaf_C21341>(0);
             if (!EgoActiveQueue) return;
             EgoActiveQueue = false;
             ForcedEgo();

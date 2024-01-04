@@ -14,12 +14,12 @@ namespace TheColorsMod_C21341.Reno.Passive
         {
             if (!Activated) return;
             foreach (var unit in BattleObjectManager.instance.GetAliveList(owner.faction.ReturnOtherSideFaction()))
-                unit.OnAddBuff<BattleUnitBuf_Corrosion_C21341>(Stack);
+                unit.AddBuffCustom<BattleUnitBuf_Corrosion_C21341>(Stack);
         }
 
         public override void OnSucceedAttack(BattleDiceBehavior behavior)
         {
-            if (Activated) behavior.card.target?.OnAddBuff<BattleUnitBuf_Corrosion_C21341>(Stack);
+            if (Activated) behavior.card.target?.AddBuffCustom<BattleUnitBuf_Corrosion_C21341>(Stack);
         }
 
         public override void OnRoundEndTheLast()

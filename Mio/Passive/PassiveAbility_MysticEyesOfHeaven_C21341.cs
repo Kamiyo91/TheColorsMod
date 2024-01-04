@@ -22,13 +22,13 @@ namespace TheColorsMod_C21341.Mio.Passive
                 .FirstOrDefault(x => x.Key.Equals("MysticEyesPassive_C21341")).Value.Name;
             desc = ModParameters.LocalizedItems[TheColorsModParameters.PackageId].EffectTexts
                 .FirstOrDefault(x => x.Key.Equals("MysticEyesPassive_C21341")).Value.Desc;
-            owner.OnAddBuff<BattleUnitBuf_MysticEyesOfHeaven_C21341>(1);
+            owner.AddBuffCustom<BattleUnitBuf_MysticEyesOfHeaven_C21341>(1);
         }
 
         public override void OnRoundStart()
         {
             if (!Activated) return;
-            owner.OnAddBuff<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0);
         }
     }
 }

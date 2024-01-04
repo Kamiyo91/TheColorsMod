@@ -18,7 +18,7 @@ namespace TheColorsMod_C21341.Miyu.Dice
 
         public override void OnSucceedAttack(BattleUnitModel target)
         {
-            target.OnAddBuffCustom<BattleUnitBuf_MagicOrbs_C21341>(0, maxStack: 0);
+            target.AddBuffCustom<BattleUnitBuf_MagicOrbs_C21341>(0, maxStack: 0);
         }
     }
 }

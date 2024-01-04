@@ -1,6 +1,4 @@
-﻿using UtilLoader21341.Util;
-
-namespace TheColorsMod_C21341.Raziel.Buff
+﻿namespace TheColorsMod_C21341.Raziel.Buff
 {
     public class BattleUnitBuf_RedirectOnSelf_C21341 : BattleUnitBuf
     {
@@ -21,11 +19,6 @@ namespace TheColorsMod_C21341.Raziel.Buff
         public void SetTarget(BattleUnitModel target)
         {
             _target = target;
-        }
-
-        public override void OnAddBuf(int addedStack)
-        {
-            this.OnAddBufCustom(addedStack, maxStack: 0);
         }
     }
 }

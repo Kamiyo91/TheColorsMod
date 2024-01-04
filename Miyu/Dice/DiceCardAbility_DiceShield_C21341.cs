@@ -11,7 +11,7 @@ namespace TheColorsMod_C21341.Miyu.Dice
             target.breakDetail.RecoverBreak(behavior.DiceResultValue);
             target.RecoverHP(behavior.DiceResultValue);
             if (target.GetActiveBuff<BattleUnitBuf_EmotionShield_C21341>() == null)
-                target.OnAddBuffCustom<BattleUnitBuf_Shield_C21341>(0, maxStack: 0);
+                target.AddBuffCustom<BattleUnitBuf_Shield_C21341>(0, maxStack: 0);
         }
     }
 }

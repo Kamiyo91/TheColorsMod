@@ -25,10 +25,10 @@ namespace TheColorsMod_C21341.Wonderland.Card
             if (buff != null)
             {
                 unit.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Smoke, buff.stack, unit);
-                buff.OnAddBuf(-10);
+                buff.AddBufCustom(-10);
             }
 
-            unit.OnAddBuff<BattleUnitBuf_SmokeScreen_C21341>(0);
+            unit.AddBuffCustom<BattleUnitBuf_SmokeScreen_C21341>(0);
             unit.RemoveDiceTargets(false);
         }
 
