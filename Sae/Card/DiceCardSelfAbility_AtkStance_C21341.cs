@@ -20,7 +20,7 @@ namespace TheColorsMod_C21341.Sae.Card
                 ChangeDeckEnemy(unit);
             StanceUtil.RemoveStanceBuffs(unit);
             StanceUtil.RemoveCards(unit);
-            unit.ChangeStance<BattleUnitBuf_AtkStance_C21341>(0, ActionDetail.Standing);
+            unit.ChangeStance<BattleUnitBuf_AtkStance_C21341>(0, resetStance: true);
             unit.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, unit);
             StanceUtil.DecreaseStacksBufType(unit, KeywordBuf.Endurance, 1);
             StanceUtil.CheckEmotionCard(unit, StruggleEmotionType.Atk);
