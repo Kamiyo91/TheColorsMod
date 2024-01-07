@@ -34,7 +34,7 @@ namespace TheColorsMod_C21341.Miyu.Passive
         public override void OnRoundStart()
         {
             HandleCards();
-            owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_Mana_C21341>(0, maxStack: 100);
         }
 
         public void HandleCards()

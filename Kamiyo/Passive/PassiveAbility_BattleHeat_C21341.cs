@@ -12,7 +12,7 @@ namespace TheColorsMod_C21341.Kamiyo.Passive
 
         public override void OnRoundStart()
         {
-            if (Activated) owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(0);
+            if (Activated) owner.AddBuffCustom<BattleUnitBuf_BattleHeat_C21341>(0, maxStack: 5);
         }
 
         public override void OnWaveStart()

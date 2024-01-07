@@ -8,12 +8,12 @@ namespace TheColorsMod_C21341.Wonderland.Passive
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
-            self.AddBuffCustom<BattleUnitBuf_TimeRecession_C21341>(1);
+            self.AddBuffCustom<BattleUnitBuf_TimeRecession_C21341>(1, maxStack: 5);
         }
 
         public override void OnRoundStart()
         {
-            owner.AddBuffCustom<BattleUnitBuf_TimeRecession_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_TimeRecession_C21341>(0, maxStack: 5);
         }
 
         public override void OnStartBattle()

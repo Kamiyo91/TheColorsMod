@@ -28,7 +28,7 @@ namespace TheColorsMod_C21341.Mio.Passive
         public override void OnRoundStart()
         {
             if (!Activated) return;
-            owner.AddBuffCustom<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0);
+            owner.AddBuffCustom<BattleUnitBuf_MysticEyesOfHeaven_C21341>(0, maxStack: 10);
         }
     }
 }

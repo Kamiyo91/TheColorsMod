@@ -83,7 +83,7 @@ namespace TheColorsMod_C21341.Zero.Passive
         public void HandleBlueBurn()
         {
             if (owner.GetActiveBuff<BattleUnitBuf_BlueBurn_C21341>() == null)
-                owner.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(0);
+                owner.AddBuffCustom<BattleUnitBuf_BlueBurn_C21341>(0, maxStack: 999);
         }
 
         public override void OnRoundEndTheLast()

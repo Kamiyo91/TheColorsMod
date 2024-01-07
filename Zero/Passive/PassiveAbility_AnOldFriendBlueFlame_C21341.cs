@@ -15,7 +15,7 @@ namespace TheColorsMod_C21341.Zero.Passive
             AllyUnit = BattleObjectManager.instance.GetAliveList(owner.faction)
                 .FirstOrDefault(x => x.GetActivePassive<PassiveAbility_AnOldFriendGreenHunter_C21341>() != null);
             Active = AllyUnit != null;
-            if (Active) owner.AddBuffCustom<BattleUnitBuf_AnOldFriendBlue_C21341>(0);
+            if (Active) owner.AddBuffCustom<BattleUnitBuf_AnOldFriendBlue_C21341>(0, maxStack: 5);
         }
 
         public override void OnDieOtherUnit(BattleUnitModel unit)
